@@ -136,29 +136,36 @@ class unit_gcn(nn.Module):
 
 		y = None
 
+		use_ck = True
 		for i in range(self.num_subset):
-			# print(A1.size())
-			# conv_a[0](x).size() = 2, 16, 300, 25
-			# 2, 25, 4800
-			A1 = self.conv_a[i](x).permute(0, 3, 1, 2).contiguous().view(N, V, self.inter_c * T)
-			# print(A2.size())
-			# 2, 4800, 25
-			A2 = self.conv_b[i](x).view(N, self.inter_c * T, V)
-
-			# 计算C
-			# matmul(A1, A2).size() = 2, 25, 25
-			# A1.size() = 2, 25, 25
-			# 对倒数第2维进行softmax，归一到0~1的范围中
-			A1 = self.soft(torch.matmul(A1, A2) / A1.size(-1))  # N V V
-
-			# A1 = A + B + C
-			# A1.size() = 2, 25, 25
-			A1 = A1 + A[i]
-			
 			# 2, 900, 25
 			A2 = x.view(N, C * T, V)
 
-			z = self.conv_d[i](torch.matmul(A2, A1).view(N, C, T, V))
+			if use_ck:
+				# print(A1.size())
+				# conv_a[0](x).size() = 2, 16, 300, 25
+				# 2, 25, 4800
+				A1 = self.conv_a[i](x).permute(0, 3, 1, 2).contiguous().view(N, V, self.inter_c * T)
+				# print(A2.size())
+				# 2, 4800, 25
+				A2 = self.conv_b[i](x).view(N, self.inter_c * T, V)
+
+				# 计算C
+				# matmul(A1, A2).size() = 2, 25, 25
+				# A1.size() = 2, 25, 25
+				# 对倒数第2维进行softmax，归一到0~1的范围中
+				A1 = self.soft(torch.matmul(A1, A2) / A1.size(-1))  # N V V
+
+				# A1 = A + B + C
+				# A1.size() = 2, 25, 25
+				A1 = A1 + A[i]
+				z = self.conv_d[i](torch.matmul(A2, A1).view(N, C, T, V))
+			
+			else:
+				A1 = torch.zeros(2, 25, 25).cuda()
+				A1 = A1 + A[i]
+				z = self.conv_d[i](torch.matmul(A2, A1).view(N, C, T, V))
+
 			y = z + y if y is not None else z
 
 		y = self.bn(y)
