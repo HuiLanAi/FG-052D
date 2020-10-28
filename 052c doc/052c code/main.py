@@ -585,7 +585,12 @@ class Processor():
                             requires_grad=False,
                             volatile=True)
 
-                    # struck at here
+                    # cut down 1 frame every 3 frames
+                    cut_frames = True
+                    for i in range(300):
+                        if (i % 10 != 0) and cut_frames:
+                            data[:, :, i, :, :]  = data[:, :, (i // 10) * 10, :, :] 
+
                     output = self.model(data)
                     
                     if isinstance(output, tuple):
