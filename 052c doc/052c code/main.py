@@ -20,9 +20,15 @@ import random
 import inspect
 import torch.backends.cudnn as cudnn
 import itertools
+import torch.nn.functional as nn_func
 
 
 os.environ['CUDA_VISIBLE_DEVICES'] = "0"
+
+
+total_frames = 0
+cut_frames = 0
+
 
 def init_seed(_):
     torch.cuda.manual_seed_all(0)
@@ -554,6 +560,9 @@ class Processor():
             torch.save(weights, self.arg.model_saved_name + '-' + str(epoch) + '-' + str(int(self.global_step)) + '.pt')
 
     def eval(self, epoch, save_score=False, loader_name=['test'], wrong_file=None, result_file=None):
+        global total_frames
+        global cut_frames
+        
         if wrong_file is not None:
             f_w = open(wrong_file, 'w')
         if result_file is not None:
@@ -585,11 +594,35 @@ class Processor():
                             requires_grad=False,
                             volatile=True)
 
-                    # cut down 1 frame every 3 frames
-                    cut_frames = True
-                    for i in range(300):
-                        if (i % 10 != 0) and cut_frames:
-                            data[:, :, i, :, :]  = data[:, :, (i // 10) * 10, :, :] 
+                    # skip computing and cut frames
+                    skip_mode = True
+                    skip_threshold = 0.01
+
+                    if skip_mode:
+                        total_frames += 300
+                        key_frame_index = 0
+                        for i in range(300):
+                            key_frame = data[:, :, key_frame_index, :, :]
+                            dim_a, dim_b, dim_c, dim_d = key_frame.size()
+                            key_frame = key_frame.reshape(dim_a, dim_b * dim_c * dim_d)
+                            cmp_frame = data[:, :, i, :, :]
+                            cmp_frame = cmp_frame.reshape(dim_a, dim_b * dim_c * dim_d)
+
+                            # eudi distance
+                            # distance = nn_func.pairwise_distance(key_frame, cmp_frame, 2)
+
+                            # cos similarity
+                            distance = 1 - torch.cosine_similarity(key_frame, cmp_frame, 1)
+                            
+                            # print(distance)
+                            # debug = input()
+                            
+                            if(distance <= skip_threshold):
+                                cut_frames += 1
+                                data[:, :, i, :, :] = data[:, :, key_frame_index, :, :]
+                            else:
+                                key_frame_index = i                            
+
 
                     output = self.model(data)
                     
@@ -714,3 +747,5 @@ if __name__ == '__main__':
     processor = Processor(arg)
 
     processor.start()
+    print("skip rate...")
+    print(str(cut_frames / total_frames))
