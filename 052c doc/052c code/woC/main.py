@@ -50,7 +50,7 @@ def get_parser():
         default='./work_dir/temp',
         help='the work folder for storing results')
 
-    parser.add_argument('-model_saved_name', default='')
+    parser.add_argument('-model_saved_name', default='woC')
     parser.add_argument(
         '--config',
         default='./config/nturgbd-cross-view/test_bone.yaml',
@@ -119,10 +119,13 @@ def get_parser():
         type=dict,
         default=dict(),
         help='the arguments of model')
+        
+    # change default weight path here!!!
     parser.add_argument(
         '--weights',
-        default=None,
+        default='',
         help='the weights for network initialization')
+
     parser.add_argument(
         '--ignore-weights',
         type=str,
@@ -182,6 +185,7 @@ class Processor():
         self.arg = arg
         self.save_arg()
         if arg.phase == 'train':
+            print(arg.train_feeder_args)
             if not arg.train_feeder_args['debug']:
                 if os.path.isdir(arg.model_saved_name):
                     print('log_dir: ', arg.model_saved_name, 'already exist')
@@ -234,18 +238,15 @@ class Processor():
         self.output_device = output_device
         Model = import_class(self.arg.model)
         shutil.copy2(inspect.getfile(Model), self.arg.work_dir)
-        
-        # self.model = Model(**self.arg.model_args).cuda(0)
-        # self.model = Model(**self.arg.model_args).to(self.device)
-        # print(self.model)
 
         self.model = Model(**self.arg.model_args)
         self.model = nn.DataParallel(self.model, device_ids = self.device_ids)
-        # self.model.cuda(0)
         self.model.to(self.device)
 
         self.loss = nn.CrossEntropyLoss().cuda(0)
-        # self.loss = nn.CrossEntropyLoss().to(self.device)
+
+        print(self.arg.weights)
+        debug = input()
 
         if self.arg.weights:
             print(self.arg.weights)
@@ -596,32 +597,80 @@ class Processor():
 
                     # skip computing and cut frames
                     skip_mode = True
-                    skip_threshold = 0.01
+                    skip_threshold = 0.005
 
                     if skip_mode:
                         total_frames += 300
                         key_frame_index = 0
-                        for i in range(300):
-                            key_frame = data[:, :, key_frame_index, :, :]
-                            dim_a, dim_b, dim_c, dim_d = key_frame.size()
-                            key_frame = key_frame.reshape(dim_a, dim_b * dim_c * dim_d)
-                            cmp_frame = data[:, :, i, :, :]
-                            cmp_frame = cmp_frame.reshape(dim_a, dim_b * dim_c * dim_d)
 
+                        # # random frame-cut method
+                        for i in range (300):
+                            if(i % 5 == 1):
+                                data[:, :, i, :, :] = data[:, :, i - 1, :, :]
+                            if(i % 5 == 3):
+                                data[:, :, i, :, :] = data[:, :, i - 1, :, :]
+                            if(i % 5 == 4):
+                                data[:, :, i, :, :] = data[:, :, i - 2, :, :]
+                            
+
+
+                        # # cache-like compare method
+                        # for i in range(300):
+                        #     key_frame = data[:, :, key_frame_index, :, :]
+                        #     dim_a, dim_b, dim_c, dim_d = key_frame.size()
+                        #     key_frame = key_frame.reshape(dim_a, dim_b * dim_c * dim_d)
+                        #     cmp_frame = data[:, :, i, :, :]
+                        #     cmp_frame = cmp_frame.reshape(dim_a, dim_b * dim_c * dim_d)
+                            
                             # eudi distance
                             # distance = nn_func.pairwise_distance(key_frame, cmp_frame, 2)
 
                             # cos similarity
-                            distance = 1 - torch.cosine_similarity(key_frame, cmp_frame, 1)
+                            # distance = 1 - torch.cosine_similarity(key_frame, cmp_frame, 1)
                             
                             # print(distance)
                             # debug = input()
                             
-                            if(distance <= skip_threshold):
-                                cut_frames += 1
-                                data[:, :, i, :, :] = data[:, :, key_frame_index, :, :]
-                            else:
-                                key_frame_index = i                            
+                            # if(distance <= skip_threshold):
+                            #     cut_frames += 1
+                            #     data[:, :, i, :, :] = data[:, :, key_frame_index, :, :]
+                            # else:
+                            #     key_frame_index = i       
+
+                        # group compare method
+                        # group_size = 4
+                        # for i in range(300 // group_size):
+                        #     # five frames consist one group
+                        #     group_head_index = i * group_size
+                        #     key_frame = data[:, :, group_head_index, :, :]
+                        #     dim_a, dim_b, dim_c, dim_d = key_frame.size()
+                        #     key_frame = key_frame.reshape(dim_a, dim_b * dim_c * dim_d)
+
+                        #     for j in range (group_size - 1):
+                        #         cmp_frame = data[:, :, group_head_index + j + 1, :, :]
+                        #         cmp_frame = cmp_frame.reshape(dim_a, dim_b * dim_c * dim_d)
+                        #         # cos similarity
+                        #         distance = 1 - torch.cosine_similarity(key_frame, cmp_frame, 1)
+                                
+                        #         if(distance <= skip_threshold):
+                        #             cut_frames += 1
+                        #             data[:, :, group_head_index + j + 1, :, :] = data[:, :, group_head_index, :, :]
+
+
+                        # group merge method
+                        # group_size = 5
+                        # for i in range(300 // group_size):
+                        #     merge_val = data[:, :, i * group_size, :, :] + data[:, :, i * group_size + 1, :, :] + data[:, :, i * group_size + 2, :, :]
+                        #     merge_val /= 3
+                        #     for j in range (3):
+                        #         data[:, :, i * group_size + j, :, :] = merge_val
+                            
+                        #     merge_val = data[:, :, i * group_size + 3, :, :] + data[:, :, i * group_size + 4, :, :]
+                        #     merge_val /= 2
+                        #     for j in range (2):
+                        #         data[:, :, i * group_size + j + 3, :, :] = merge_val
+                            
+
 
 
                     output = self.model(data)
@@ -745,6 +794,7 @@ if __name__ == '__main__':
     init_seed(0)
 
     processor = Processor(arg)
+    print("cnmcnmcnmcnmcnm")
 
     processor.start()
     print("skip rate...")

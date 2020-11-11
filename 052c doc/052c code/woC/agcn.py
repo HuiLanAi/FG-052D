@@ -136,10 +136,9 @@ class unit_gcn(nn.Module):
 
 		y = None
 
-		use_ck = True
+		use_ck = False
 		for i in range(self.num_subset):
 			# 2, 900, 25
-			A2 = x.view(N, C * T, V)
 
 			if use_ck:
 				# print(A1.size())
@@ -158,13 +157,28 @@ class unit_gcn(nn.Module):
 
 				# A1 = A + B + C
 				# A1.size() = 2, 25, 25
+				A2 = x.view(N, C * T, V)
 				A1 = A1 + A[i]
+
+				# print(A2.size())
+				# print(A1.size())
+				# debug = input()
+				
 				z = self.conv_d[i](torch.matmul(A2, A1).view(N, C, T, V))
 			
 			else:
-				A1 = torch.zeros(2, 25, 25).cuda()
-				A1 = A1 + A[i]
-				z = self.conv_d[i](torch.matmul(A2, A1).view(N, C, T, V))
+				A2 = x.view(N, C * T, V)
+				try:
+					A1 = torch.zeros(2, 25, 25).cuda()
+					A1 = A1 + A[i]
+					z = self.conv_d[i](torch.matmul(A2, A1).view(N, C, T, V))
+				except RuntimeError:
+					A1 = torch.zeros(40, 25, 25).cuda()
+					A1 = A1 + A[i]
+					z = self.conv_d[i](torch.matmul(A2, A1).view(N, C, T, V))
+				# print(A2.size())
+				# print(A1.size())
+				# debug = input()
 
 			y = z + y if y is not None else z
 
