@@ -258,7 +258,6 @@ class Processor():
             weights = OrderedDict(
                 [["module." + k,
                   v.to(self.device)] for k, v in weights.items()])
-                #   v] for k, v in weights.items()])
 
             for w in self.arg.ignore_weights:
                 if weights.pop(w, None) is not None:

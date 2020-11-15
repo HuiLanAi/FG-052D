@@ -6,42 +6,6 @@ import numpy as np
 import math
 import os
 
-sample_num = 0
-x_len_l10 = 0
-x_len_l1 = 0
-x_len_l0 = 0
-x_len_l2 = 0
-x_len_l3 = 0
-x_len_l4 = 0
-x_len_l5 = 0
-x_len_l6 = 0
-x_len_l7 = 0
-x_len_l8 = 0
-x_len_l9 = 0
-x_zero_cnt_l10 = 0
-x_zero_cnt_l0 = 0
-x_zero_cnt_l1 = 0
-x_zero_cnt_l2 = 0
-x_zero_cnt_l3 = 0
-x_zero_cnt_l4 = 0
-x_zero_cnt_l5 = 0
-x_zero_cnt_l6 = 0
-x_zero_cnt_l7 = 0
-x_zero_cnt_l8 = 0
-x_zero_cnt_l9 = 0
-x_zero_cnt_l10 = 0
-x_zero_cnt_l1 = 0
-x_zero_cnt_l2 = 0
-x_zero_cnt_l3 = 0
-x_zero_cnt_l4 = 0
-x_zero_cnt_l5 = 0
-x_zero_cnt_l6 = 0
-x_zero_cnt_l7 = 0
-x_zero_cnt_l8 = 0
-x_zero_cnt_l9 = 0
-
-
-
 def import_class(name):
 	components = name.split('.')
 	mod = __import__(components[0])
@@ -235,178 +199,26 @@ class Model(nn.Module):
 		self.l10 = TCN_GCN_unit(256, 256, A)
 		self.fc = nn.Linear(256, num_class)
 
-
-		print("cnm xhs")
-		print("cnm xhs")
-		print("cnm xhs")
-
-		# for name, parameters in self.named_parameters():
-		# 	print(name, ':', parameters.size())
-
-		# self.l1 = TCN_GCN_unit(6, 128, A, residual=False)
-		# self.l2 = TCN_GCN_unit(128, 128, A)
-		# self.l3 = TCN_GCN_unit(128, 128, A)
-		# self.l4 = TCN_GCN_unit(128, 128, A)
-		# self.l5 = TCN_GCN_unit(128, 256, A, stride=2)
-		# self.l6 = TCN_GCN_unit(256, 256, A)
-		# self.l7 = TCN_GCN_unit(256, 256, A)
-		# self.l8 = TCN_GCN_unit(256, 512, A, stride=2)
-		# self.l9 = TCN_GCN_unit(512, 512, A)
-		# self.l10 = TCN_GCN_unit(512, 512, A)
-
-		# self.fc = nn.Linear(512, num_class)
-
 		nn.init.normal(self.fc.weight, 0, math.sqrt(2. / num_class))
 		bn_init(self.data_bn, 1)
 
 	def forward(self, x):
-		global sample_num
-		global x_len_l10
-		global x_len_l0
-		global x_len_l1
-		global x_len_l2
-		global x_len_l3
-		global x_len_l4
-		global x_len_l5
-		global x_len_l6
-		global x_len_l7
-		global x_len_l8
-		global x_len_l9
-		global x_zero_cnt_l10
-		global x_zero_cnt_l0
-		global x_zero_cnt_l1
-		global x_zero_cnt_l2
-		global x_zero_cnt_l3
-		global x_zero_cnt_l4
-		global x_zero_cnt_l5
-		global x_zero_cnt_l6
-		global x_zero_cnt_l7
-		global x_zero_cnt_l8
-		global x_zero_cnt_l9
-
 		N, C, T, V, M = x.size()
 
 		x = x.permute(0, 4, 3, 1, 2).contiguous().view(N, M * V * C, T)
 		x = self.data_bn(x)
 		x = x.view(N, M, V, C, T).permute(0, 1, 3, 4, 2).contiguous().view(N * M, C, T, V)
 
-		# x_sp = x.cpu().numpy()
-		# x_sp = x_sp.flatten()
-		# x_sp = x_sp.tolist()
-		# x_len_l0 += len(x_sp)
-		# for x_single in x_sp:
-		# 	if x_single == 0:
-		# 		x_zero_cnt_l0 += 1
-
 		x = self.l1(x)
-		# x_sp = x.cpu().numpy()
-		# x_sp = x_sp.flatten()
-		# x_sp = x_sp.tolist()
-		# x_len_l1 += len(x_sp)
-		# for x_single in x_sp:
-		# 	if x_single == 0:
-		# 		x_zero_cnt_l1 += 1
-
 		x = self.l2(x)
-		# x_sp = x.cpu().numpy()
-		# x_sp = x_sp.flatten()
-		# x_sp = x_sp.tolist()
-		# x_len_l2 += len(x_sp)
-		# for x_single in x_sp:
-		# 	if x_single == 0:
-		# 		x_zero_cnt_l2 += 1
-
 		x = self.l3(x)
-		# x_sp = x.cpu().numpy()
-		# x_sp = x_sp.flatten()
-		# x_sp = x_sp.tolist()
-		# x_len_l3 += len(x_sp)
-		# for x_single in x_sp:
-		# 	if x_single == 0:
-		# 		x_zero_cnt_l3 += 1
-
 		x = self.l4(x)
-		# x_sp = x.cpu().numpy()
-		# x_sp = x_sp.flatten()
-		# x_sp = x_sp.tolist()
-		# x_len_l4 += len(x_sp)
-		# for x_single in x_sp:
-		# 	if x_single == 0:
-		# 		x_zero_cnt_l4 += 1
-
 		x = self.l5(x)
-		# x_sp = x.cpu().numpy()
-		# x_sp = x_sp.flatten()
-		# x_sp = x_sp.tolist()
-		# x_len_l5 += len(x_sp)
-		# for x_single in x_sp:
-		# 	if x_single == 0:
-		# 		x_zero_cnt_l5 += 1
-
 		x = self.l6(x)
-		# x_sp = x.cpu().numpy()
-		# x_sp = x_sp.flatten()
-		# x_sp = x_sp.tolist()
-		# x_len_l6 += len(x_sp)
-		# for x_single in x_sp:
-		# 	if x_single == 0:
-		# 		x_zero_cnt_l6 += 1
-
 		x = self.l7(x)
-		# x_sp = x.cpu().numpy()
-		# x_sp = x_sp.flatten()
-		# x_sp = x_sp.tolist()
-		# x_len_l7 += len(x_sp)
-		# for x_single in x_sp:
-		# 	if x_single == 0:
-		# 		x_zero_cnt_l7 += 1
-
 		x = self.l8(x)
-		# x_sp = x.cpu().numpy()
-		# x_sp = x_sp.flatten()
-		# x_sp = x_sp.tolist()
-		# x_len_l8 += len(x_sp)
-		# for x_single in x_sp:
-		# 	if x_single == 0:
-		# 		x_zero_cnt_l8 += 1
-
 		x = self.l9(x)
-		# x_sp = x.cpu().numpy()
-		# x_sp = x_sp.flatten()
-		# x_sp = x_sp.tolist()
-		# x_len_l9 += len(x_sp)
-		# for x_single in x_sp:
-		# 	if x_single == 0:
-		# 		x_zero_cnt_l9 += 1
-
 		x = self.l10(x)
-		# x_sp = x.cpu().numpy()
-		# x_sp = x_sp.flatten()
-		# x_sp = x_sp.tolist()
-		# x_len_l10 += len(x_sp)
-		# for x_single in x_sp:
-		# 	if x_single == 0:
-		# 		x_zero_cnt_l10 += 1
-
-		# if sample_num == 5000:
-		# 	sparase_file = open("sparase_file.txt", "w")
-		# 	sparase_file.write(str(x_zero_cnt_l0 / x_len_l0) + '\n')
-		# 	sparase_file.write(str(x_zero_cnt_l1 / x_len_l1) + '\n')
-		# 	sparase_file.write(str(x_zero_cnt_l2 / x_len_l2) + '\n')
-		# 	sparase_file.write(str(x_zero_cnt_l3 / x_len_l3) + '\n')
-		# 	sparase_file.write(str(x_zero_cnt_l4 / x_len_l4) + '\n')
-		# 	sparase_file.write(str(x_zero_cnt_l5 / x_len_l5) + '\n')
-		# 	sparase_file.write(str(x_zero_cnt_l6 / x_len_l6) + '\n')
-		# 	sparase_file.write(str(x_zero_cnt_l7 / x_len_l7) + '\n')
-		# 	sparase_file.write(str(x_zero_cnt_l8 / x_len_l8) + '\n')
-		# 	sparase_file.write(str(x_zero_cnt_l9 / x_len_l9) + '\n')
-		# 	sparase_file.write(str(x_zero_cnt_l10 / x_len_l10) + '\n')
-		# 	sparase_file.close()
-		# 	return None
-		# else:
-		# 	sample_num += 1
-		
-		# N*M,C,T,V
 		c_new = x.size(1)
 		x = x.view(N, M, c_new, -1)
 		x = x.mean(3).mean(1)
