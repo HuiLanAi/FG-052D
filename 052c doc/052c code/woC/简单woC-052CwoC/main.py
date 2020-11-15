@@ -245,9 +245,6 @@ class Processor():
 
         self.loss = nn.CrossEntropyLoss().cuda(0)
 
-        print(self.arg.weights)
-        debug = input()
-
         if self.arg.weights:
             print(self.arg.weights)
             self.global_step = int(arg.weights[:-3].split('-')[-1])
@@ -258,124 +255,6 @@ class Processor():
             else:
                 weights = torch.load(self.arg.weights)
             
-            # zero_cnt = 0
-            # plus_1ten_one = 0
-            # plus_1_2 = 0
-            # plus_2_inf = 0
-            # plus_hundred_ten = 0
-            # plus_thousand_hundred = 0
-            # plus_wan_thousand = 0
-            # plus_0_wan4 = 0
-            # minus_wan_0 = 0
-            # minus_thousand_wan = 0
-            # minus_hundred_thousand = 0
-            # minus_ten_hundred = 0
-            # minus_one_ten = 0
-            # minus_2_1 = 0
-            # minus_inf_2 = 0
-            # total_weight = 0
-
-            # for _, v in weights.items():
-            #     v_list = v.cpu().numpy().tolist()
-            #     print(type(v_list))
-
-            #     if type(v_list) == int or type(v_list) == float:
-            #         total_weight += 1
-            #         if single_data == 0:
-            #             zero_cnt += 1
-            #         if single_data < 1 and single_data >= 0.1:
-            #             plus_1ten_one += 1
-            #         if single_data < 2 and single_data >= 1:
-            #             plus_1_2 += 1
-            #         if single_data >= 2:
-            #             plus_2_inf += 1
-            #         if single_data < 0.1 and single_data >= 0.01:
-            #             plus_hundred_ten += 1
-            #         if single_data < 0.01 and single_data >= 0.001:
-            #             plus_thousand_hundred += 1
-            #         if single_data < 0.001 and single_data >= 0.0001:
-            #             plus_wan_thousand += 1
-            #         if single_data < 0.0001 and single_data > 0:
-            #             plus_0_wan4 += 1
-            #         if single_data > -0.0001 and single_data < 0:
-            #             minus_wan_0 += 1
-            #         if single_data > -0.001 and single_data <= -0.0001:
-            #             minus_thousand_wan += 1
-            #         if single_data > -0.01 and single_data <= -0.001:
-            #             minus_hundred_thousand += 1
-            #         if single_data > -0.1 and single_data <= -0.01:
-            #             minus_ten_hundred += 1
-            #         if single_data > -1 and single_data <= -0.1:
-            #             minus_one_ten += 1
-            #         if single_data > -2 and single_data <= -1:
-            #             minus_2_1 += 1
-            #         if single_data <= -2:
-            #             minus_inf_2 += 1
-
-            #     if type(v_list) == list:
-            #         v_list_np = np.array(v_list)
-            #         vlist_single = v_list_np.flatten()
-            #         vlist_single = vlist_single.tolist()
-
-            #         print("len")
-            #         print("len")
-            #         print("len")
-            #         print(len(vlist_single))
-
-            #         for single_data in vlist_single:
-            #             total_weight += 1
-            #             if single_data == 0:
-            #                 zero_cnt += 1
-            #             if single_data < 1 and single_data >= 0.1:
-            #                 plus_1ten_one += 1
-            #             if single_data < 2 and single_data >= 1:
-            #                 plus_1_2 += 1
-            #             if single_data >= 2:
-            #                 plus_2_inf += 1
-            #             if single_data < 0.1 and single_data >= 0.01:
-            #                 plus_hundred_ten += 1
-            #             if single_data < 0.01 and single_data >= 0.001:
-            #                 plus_thousand_hundred += 1
-            #             if single_data < 0.001 and single_data >= 0.0001:
-            #                 plus_wan_thousand += 1
-            #             if single_data < 0.0001 and single_data > 0:
-            #                 plus_0_wan4 += 1
-            #             if single_data > -0.0001 and single_data < 0:
-            #                 minus_wan_0 += 1
-            #             if single_data > -0.001 and single_data <= -0.0001:
-            #                 minus_thousand_wan += 1
-            #             if single_data > -0.01 and single_data <= -0.001:
-            #                 minus_hundred_thousand += 1
-            #             if single_data > -0.1 and single_data <= -0.01:
-            #                 minus_ten_hundred += 1
-            #             if single_data > -1 and single_data <= -0.1:
-            #                 minus_one_ten += 1
-            #             if single_data > -2 and single_data <= -1:
-            #                 minus_2_1 += 1
-            #             if single_data <= -2:
-            #                 minus_inf_2 += 1
-                    
-            
-            # weight_file_text = open("weight_file_text.txt", "w")
-            # weight_file_text.write(str(plus_2_inf) + '\n' + 
-            #                         str(plus_1_2) + '\n' + 
-            #                         str(plus_1ten_one) + '\n' + 
-            #                         str(plus_hundred_ten) + '\n' + 
-            #                         str(plus_thousand_hundred) + '\n' + 
-            #                         str(plus_wan_thousand) + '\n' + 
-            #                         str(plus_0_wan4) + '\n' + 
-            #                         str(zero_cnt) + '\n' + 
-            #                         str(minus_wan_0) + '\n' + 
-            #                         str(minus_thousand_wan) + '\n' + 
-            #                         str(minus_hundred_thousand) + '\n' + 
-            #                         str(minus_ten_hundred) + '\n' + 
-            #                         str(minus_one_ten) + '\n' + 
-            #                         str(minus_2_1) + '\n' + 
-            #                         str(minus_inf_2) + '\n' + 
-            #                         str(total_weight))
-            
-            # weight_file_text.close()
-
             weights = OrderedDict(
                 [["module." + k,
                   v.to(self.device)] for k, v in weights.items()])
