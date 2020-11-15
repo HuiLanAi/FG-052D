@@ -208,7 +208,7 @@ class Processor():
         self.global_step = 0
         self.load_model()
 
-        self.load_optimizer()
+        # self.load_optimizer()
         self.load_data()
         self.lr = self.arg.base_lr
       
@@ -239,17 +239,13 @@ class Processor():
         Model = import_class(self.arg.model)
         shutil.copy2(inspect.getfile(Model), self.arg.work_dir)
 
-        self.model = Model(**self.arg.model_args)
-        self.model = nn.DataParallel(self.model, device_ids = self.device_ids)
-        self.model.to(self.device)
+        # self.model = Model(**self.arg.model_args)
+        # self.model = nn.DataParallel(self.model, device_ids = self.device_ids)
+        # self.model.to(self.device)
 
         self.loss = nn.CrossEntropyLoss().cuda(0)
 
-        print(self.arg.weights)
-        debug = input()
-
         if self.arg.weights:
-            print(self.arg.weights)
             self.global_step = int(arg.weights[:-3].split('-')[-1])
             self.print_log('Load weights from {}.'.format(self.arg.weights))
             if '.pkl' in self.arg.weights:
@@ -258,135 +254,42 @@ class Processor():
             else:
                 weights = torch.load(self.arg.weights)
             
-            zero_cnt = 0
-            total_weight = 0
-
-            print(type(weights))
-            debug = input()
-
-
-            # for _, v in weights.items():
-            #     v_list = v.cpu().numpy().tolist()
-            #     print(type(v_list))
-
-                # if type(v_list) == int or type(v_list) == float:
-                #     total_weight += 1
-                #     if single_data == 0:
-                #         zero_cnt += 1
-            #         if single_data < 1 and single_data >= 0.1:
-            #             plus_1ten_one += 1
-            #         if single_data < 2 and single_data >= 1:
-            #             plus_1_2 += 1
-            #         if single_data >= 2:
-            #             plus_2_inf += 1
-            #         if single_data < 0.1 and single_data >= 0.01:
-            #             plus_hundred_ten += 1
-            #         if single_data < 0.01 and single_data >= 0.001:
-            #             plus_thousand_hundred += 1
-            #         if single_data < 0.001 and single_data >= 0.0001:
-            #             plus_wan_thousand += 1
-            #         if single_data < 0.0001 and single_data > 0:
-            #             plus_0_wan4 += 1
-            #         if single_data > -0.0001 and single_data < 0:
-            #             minus_wan_0 += 1
-            #         if single_data > -0.001 and single_data <= -0.0001:
-            #             minus_thousand_wan += 1
-            #         if single_data > -0.01 and single_data <= -0.001:
-            #             minus_hundred_thousand += 1
-            #         if single_data > -0.1 and single_data <= -0.01:
-            #             minus_ten_hundred += 1
-            #         if single_data > -1 and single_data <= -0.1:
-            #             minus_one_ten += 1
-            #         if single_data > -2 and single_data <= -1:
-            #             minus_2_1 += 1
-            #         if single_data <= -2:
-            #             minus_inf_2 += 1
-
-            #     if type(v_list) == list:
-            #         v_list_np = np.array(v_list)
-            #         vlist_single = v_list_np.flatten()
-            #         vlist_single = vlist_single.tolist()
-
-            #         print("len")
-            #         print("len")
-            #         print("len")
-            #         print(len(vlist_single))
-
-            #         for single_data in vlist_single:
-            #             total_weight += 1
-            #             if single_data == 0:
-            #                 zero_cnt += 1
-            #             if single_data < 1 and single_data >= 0.1:
-            #                 plus_1ten_one += 1
-            #             if single_data < 2 and single_data >= 1:
-            #                 plus_1_2 += 1
-            #             if single_data >= 2:
-            #                 plus_2_inf += 1
-            #             if single_data < 0.1 and single_data >= 0.01:
-            #                 plus_hundred_ten += 1
-            #             if single_data < 0.01 and single_data >= 0.001:
-            #                 plus_thousand_hundred += 1
-            #             if single_data < 0.001 and single_data >= 0.0001:
-            #                 plus_wan_thousand += 1
-            #             if single_data < 0.0001 and single_data > 0:
-            #                 plus_0_wan4 += 1
-            #             if single_data > -0.0001 and single_data < 0:
-            #                 minus_wan_0 += 1
-            #             if single_data > -0.001 and single_data <= -0.0001:
-            #                 minus_thousand_wan += 1
-            #             if single_data > -0.01 and single_data <= -0.001:
-            #                 minus_hundred_thousand += 1
-            #             if single_data > -0.1 and single_data <= -0.01:
-            #                 minus_ten_hundred += 1
-            #             if single_data > -1 and single_data <= -0.1:
-            #                 minus_one_ten += 1
-            #             if single_data > -2 and single_data <= -1:
-            #                 minus_2_1 += 1
-            #             if single_data <= -2:
-            #                 minus_inf_2 += 1
-                    
-            
-            # weight_file_text = open("weight_file_text.txt", "w")
-            # weight_file_text.write(str(plus_2_inf) + '\n' + 
-            #                         str(plus_1_2) + '\n' + 
-            #                         str(plus_1ten_one) + '\n' + 
-            #                         str(plus_hundred_ten) + '\n' + 
-            #                         str(plus_thousand_hundred) + '\n' + 
-            #                         str(plus_wan_thousand) + '\n' + 
-            #                         str(plus_0_wan4) + '\n' + 
-            #                         str(zero_cnt) + '\n' + 
-            #                         str(minus_wan_0) + '\n' + 
-            #                         str(minus_thousand_wan) + '\n' + 
-            #                         str(minus_hundred_thousand) + '\n' + 
-            #                         str(minus_ten_hundred) + '\n' + 
-            #                         str(minus_one_ten) + '\n' + 
-            #                         str(minus_2_1) + '\n' + 
-            #                         str(minus_inf_2) + '\n' + 
-            #                         str(total_weight))
-            
-            # weight_file_text.close()
-
             weights = OrderedDict(
                 [["module." + k,
                   v.to(self.device)] for k, v in weights.items()])
-                #   v] for k, v in weights.items()])
 
+            # weights = OrderedDict(
+            #     [["module." + k, v] for k, v in weights.items()])
+
+            for k, v in weights.items():
+                if("weight" in k or "bias" in k):
+                    weights[k].to(self.device).detach().requires_grad_(True)
+            
             for w in self.arg.ignore_weights:
                 if weights.pop(w, None) is not None:
                     self.print_log('Sucessfully Remove Weights: {}.'.format(w))
                 else:
                     self.print_log('Can Not Remove Weights: {}.'.format(w))
             
+            self.model = Model(**self.arg.model_args)
+            self.model = nn.DataParallel(self.model, device_ids = self.device_ids)
+            self.model.to(self.device)
+            
             try:
                 self.model.load_state_dict(weights)
             except:
+                f = open("error.txt", "w")
                 state = self.model.state_dict()
                 diff = list(set(state.keys()).difference(set(weights.keys())))
                 print('Can not find these weights:')
                 for d in diff:
-                    print('  ' + d)
+                    # print('  ' + d)
+                    f.write(d + '\n')
+                f.close()
                 state.update(weights)
                 self.model.load_state_dict(state)
+            
+
 
         if type(self.arg.device) is list:
             if len(self.arg.device) > 1:
@@ -395,6 +298,7 @@ class Processor():
                     device_ids=[0],
                     output_device=output_device)
         
+
 
     def load_optimizer(self):
         if self.arg.optimizer == 'SGD':

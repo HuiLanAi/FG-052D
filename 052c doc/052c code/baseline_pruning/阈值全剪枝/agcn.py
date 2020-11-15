@@ -6,6 +6,13 @@ import numpy as np
 import math
 import os
 
+weight_cnt = 0
+zero_weight_cnt = 0
+out_flag = 0
+prune_thshold = 0.03
+
+
+
 def import_class(name):
 	components = name.split('.')
 	mod = __import__(components[0])
@@ -39,6 +46,20 @@ class unit_tcn(nn.Module):
 		pad = int((kernel_size - 1) / 2)
 		self.conv = nn.Conv2d(in_channels, out_channels, kernel_size=(kernel_size, 1), padding=(pad, 0),
 							  stride=(stride, 1))
+		
+		global weight_cnt
+		global zero_weight_cnt
+
+		o_c, in_c, w, h = self.conv.weight.shape
+		weight_cnt += o_c * in_c * w * h
+		for o_c_index in range (o_c):
+			for in_c_index in range (in_c):
+				for w_index in range (w):
+					for h_index in range (h):
+						if(torch.abs(self.conv.weight[o_c_index, in_c_index, w_index, h_index]) < prune_thshold):
+							self.conv.weight[o_c_index, in_c_index, w_index, h_index] = 0
+							zero_weight_cnt += 1
+		self.conv.requires_grad = True
 
 		self.bn = nn.BatchNorm2d(out_channels)
 		self.relu = nn.ReLU()
@@ -64,16 +85,68 @@ class unit_gcn(nn.Module):
 		self.conv_a = nn.ModuleList()
 		self.conv_b = nn.ModuleList()
 		self.conv_d = nn.ModuleList()
+
 		for i in range(self.num_subset):
 			self.conv_a.append(nn.Conv2d(in_channels, inter_channels, 1))
 			self.conv_b.append(nn.Conv2d(in_channels, inter_channels, 1))
 			self.conv_d.append(nn.Conv2d(in_channels, out_channels, 1))
+			global weight_cnt
+			global zero_weight_cnt
+			for name, para in self.conv_a.named_parameters():
+				if('weight' in name):
+					o_c, in_c, w, h = para.shape
+					weight_cnt += o_c * in_c * w * h
+					for o_c_index in range (o_c):
+						for in_c_index in range (in_c):
+							for w_index in range (w):
+								for h_index in range (h):
+									if(torch.abs(self.conv_a[i].weight[o_c_index, in_c_index, w_index, h_index]) < prune_thshold):
+										self.conv_a[i].weight[o_c_index, in_c_index, w_index, h_index] = 0
+										zero_weight_cnt += 1
+			self.conv_a[i].requires_grad = True
+			
+			for name, para in self.conv_b.named_parameters():
+				if('weight' in name):
+					o_c, in_c, w, h = para.shape
+					weight_cnt += o_c * in_c * w * h
+					for o_c_index in range (o_c):
+						for in_c_index in range (in_c):
+							for w_index in range (w):
+								for h_index in range (h):
+									if(torch.abs(self.conv_b[i].weight[o_c_index, in_c_index, w_index, h_index]) < prune_thshold):
+										self.conv_b[i].weight[o_c_index, in_c_index, w_index, h_index] = 0
+										zero_weight_cnt += 1
+			self.conv_b[i].requires_grad = True
+			
+			for name, para in self.conv_d.named_parameters():
+				if('weight' in name):
+					o_c, in_c, w, h = para.shape
+					weight_cnt += o_c * in_c * w * h
+					for o_c_index in range (o_c):
+						for in_c_index in range (in_c):
+							for w_index in range (w):
+								for h_index in range (h):
+									if(torch.abs(self.conv_d[i].weight[o_c_index, in_c_index, w_index, h_index]) < prune_thshold):
+										self.conv_d[i].weight[o_c_index, in_c_index, w_index, h_index] = 0
+										zero_weight_cnt += 1
+			self.conv_d[i].requires_grad = True
+		
 
 		if in_channels != out_channels:
 			self.down = nn.Sequential(
 				nn.Conv2d(in_channels, out_channels, 1),
 				nn.BatchNorm2d(out_channels)
 			)
+			
+			o_c, in_c, w, h = self.down[0].weight.shape
+			weight_cnt += o_c * in_c * w * h
+			for o_c_index in range (o_c):
+				for in_c_index in range (in_c):
+					for w_index in range (w):
+						for h_index in range (h):
+							if(torch.abs(self.down[0].weight[o_c_index, in_c_index, w_index, h_index]) < prune_thshold):
+								self.down[0].weight[o_c_index, in_c_index, w_index, h_index] = 0
+								zero_weight_cnt += 1
 		else:
 			self.down = lambda x: x
 
@@ -200,7 +273,14 @@ class Model(nn.Module):
 		bn_init(self.data_bn, 1)
 
 	def forward(self, x):
+		global out_flag
+		if(out_flag == 0):
+			print("compress rate: " + str(zero_weight_cnt / weight_cnt) + '\n')
+			out_flag = 1
+			debug = input()
+
 		N, C, T, V, M = x.size()
+		
 
 		x = x.permute(0, 4, 3, 1, 2).contiguous().view(N, M * V * C, T)
 		x = self.data_bn(x)
