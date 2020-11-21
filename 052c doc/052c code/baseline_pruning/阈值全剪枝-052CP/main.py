@@ -26,8 +26,10 @@ import torch.nn.functional as nn_func
 os.environ['CUDA_VISIBLE_DEVICES'] = "0"
 
 
+# 052C control signal
 total_frames = 0
 cut_frames = 0
+threshold = 0.05
 
 
 def init_seed(_):
@@ -208,7 +210,7 @@ class Processor():
         self.global_step = 0
         self.load_model()
 
-        # self.load_optimizer()
+        self.load_optimizer()
         self.load_data()
         self.lr = self.arg.base_lr
       
@@ -239,9 +241,9 @@ class Processor():
         Model = import_class(self.arg.model)
         shutil.copy2(inspect.getfile(Model), self.arg.work_dir)
 
-        # self.model = Model(**self.arg.model_args)
-        # self.model = nn.DataParallel(self.model, device_ids = self.device_ids)
-        # self.model.to(self.device)
+        self.model = Model(**self.arg.model_args)
+        self.model = nn.DataParallel(self.model, device_ids = self.device_ids)
+        self.model.to(self.device)
 
         self.loss = nn.CrossEntropyLoss().cuda(0)
 
@@ -271,10 +273,6 @@ class Processor():
                 else:
                     self.print_log('Can Not Remove Weights: {}.'.format(w))
             
-            self.model = Model(**self.arg.model_args)
-            self.model = nn.DataParallel(self.model, device_ids = self.device_ids)
-            self.model.to(self.device)
-            
             try:
                 self.model.load_state_dict(weights)
             except:
@@ -288,7 +286,6 @@ class Processor():
                 f.close()
                 state.update(weights)
                 self.model.load_state_dict(state)
-            
 
 
         if type(self.arg.device) is list:
@@ -297,7 +294,6 @@ class Processor():
                     self.model,
                     device_ids=[0],
                     output_device=output_device)
-        
 
 
     def load_optimizer(self):

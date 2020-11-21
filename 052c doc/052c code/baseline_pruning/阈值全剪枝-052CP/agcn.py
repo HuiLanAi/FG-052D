@@ -6,11 +6,11 @@ import numpy as np
 import math
 import os
 
-weight_cnt = 0
+weight_cnt = 1
 zero_weight_cnt = 0
 out_flag = 0
-prune_thshold = 0.03
-
+prune_switch = True
+threshold = 0.025
 
 
 def import_class(name):
@@ -40,37 +40,45 @@ def bn_init(bn, scale):
 	nn.init.constant(bn.bias, 0)
 
 
+def prune(weight):
+	global weight_cnt
+	global zero_weight_cnt
+	global threshold
+	global out_flag
+	pruned_weight = weight
+	pruned_weight[torch.abs(pruned_weight) < threshold] = 0
+
+	if(out_flag == 0):
+		o_c, in_c, w, h = weight.shape
+		weight_cnt += o_c * in_c * w * h
+		zero_mtx = torch.zeros(o_c, in_c, w, h).cuda()
+		zero_weight_cnt += torch.sum(torch.eq(pruned_weight, zero_mtx))
+	
+	return pruned_weight
+
 class unit_tcn(nn.Module):
 	def __init__(self, in_channels, out_channels, kernel_size=9, stride=1):
 		super(unit_tcn, self).__init__()
-		pad = int((kernel_size - 1) / 2)
-		self.conv = nn.Conv2d(in_channels, out_channels, kernel_size=(kernel_size, 1), padding=(pad, 0),
-							  stride=(stride, 1))
-		
-		global weight_cnt
-		global zero_weight_cnt
-
-		o_c, in_c, w, h = self.conv.weight.shape
-		weight_cnt += o_c * in_c * w * h
-		for o_c_index in range (o_c):
-			for in_c_index in range (in_c):
-				for w_index in range (w):
-					for h_index in range (h):
-						if(torch.abs(self.conv.weight[o_c_index, in_c_index, w_index, h_index]) < prune_thshold):
-							self.conv.weight[o_c_index, in_c_index, w_index, h_index] = 0
-							zero_weight_cnt += 1
-		self.conv.requires_grad = True
-
+		self.pad = int((kernel_size - 1) / 2)
+		self.conv = nn.Conv2d(in_channels, out_channels, kernel_size=(kernel_size, 1), padding=(self.pad, 0),
+							stride=(stride, 1))
 		self.bn = nn.BatchNorm2d(out_channels)
 		self.relu = nn.ReLU()
+		self.stride = stride
 		conv_init(self.conv)
 		bn_init(self.bn, 1)
 
+
 	def forward(self, x):
-		x = self.bn(self.conv(x))
+		global threshold
+		if(prune_switch):
+			x = F.conv2d(x, prune(self.conv.weight), self.conv.bias, padding = (self.pad, 0), stride = (self.stride, 1))
+		else:
+			x = self.conv(x)
+
+		x = self.bn(x)
 		return x
-
-
+	
 class unit_gcn(nn.Module):
 	def __init__(self, in_channels, out_channels, A, coff_embedding=4, num_subset=3):
 		super(unit_gcn, self).__init__()
@@ -85,68 +93,19 @@ class unit_gcn(nn.Module):
 		self.conv_a = nn.ModuleList()
 		self.conv_b = nn.ModuleList()
 		self.conv_d = nn.ModuleList()
+		self.in_channels = in_channels
+		self.out_channels = out_channels
 
 		for i in range(self.num_subset):
 			self.conv_a.append(nn.Conv2d(in_channels, inter_channels, 1))
 			self.conv_b.append(nn.Conv2d(in_channels, inter_channels, 1))
 			self.conv_d.append(nn.Conv2d(in_channels, out_channels, 1))
-			global weight_cnt
-			global zero_weight_cnt
-			for name, para in self.conv_a.named_parameters():
-				if('weight' in name):
-					o_c, in_c, w, h = para.shape
-					weight_cnt += o_c * in_c * w * h
-					for o_c_index in range (o_c):
-						for in_c_index in range (in_c):
-							for w_index in range (w):
-								for h_index in range (h):
-									if(torch.abs(self.conv_a[i].weight[o_c_index, in_c_index, w_index, h_index]) < prune_thshold):
-										self.conv_a[i].weight[o_c_index, in_c_index, w_index, h_index] = 0
-										zero_weight_cnt += 1
-			self.conv_a[i].requires_grad = True
-			
-			for name, para in self.conv_b.named_parameters():
-				if('weight' in name):
-					o_c, in_c, w, h = para.shape
-					weight_cnt += o_c * in_c * w * h
-					for o_c_index in range (o_c):
-						for in_c_index in range (in_c):
-							for w_index in range (w):
-								for h_index in range (h):
-									if(torch.abs(self.conv_b[i].weight[o_c_index, in_c_index, w_index, h_index]) < prune_thshold):
-										self.conv_b[i].weight[o_c_index, in_c_index, w_index, h_index] = 0
-										zero_weight_cnt += 1
-			self.conv_b[i].requires_grad = True
-			
-			for name, para in self.conv_d.named_parameters():
-				if('weight' in name):
-					o_c, in_c, w, h = para.shape
-					weight_cnt += o_c * in_c * w * h
-					for o_c_index in range (o_c):
-						for in_c_index in range (in_c):
-							for w_index in range (w):
-								for h_index in range (h):
-									if(torch.abs(self.conv_d[i].weight[o_c_index, in_c_index, w_index, h_index]) < prune_thshold):
-										self.conv_d[i].weight[o_c_index, in_c_index, w_index, h_index] = 0
-										zero_weight_cnt += 1
-			self.conv_d[i].requires_grad = True
 		
-
 		if in_channels != out_channels:
 			self.down = nn.Sequential(
 				nn.Conv2d(in_channels, out_channels, 1),
 				nn.BatchNorm2d(out_channels)
 			)
-			
-			o_c, in_c, w, h = self.down[0].weight.shape
-			weight_cnt += o_c * in_c * w * h
-			for o_c_index in range (o_c):
-				for in_c_index in range (in_c):
-					for w_index in range (w):
-						for h_index in range (h):
-							if(torch.abs(self.down[0].weight[o_c_index, in_c_index, w_index, h_index]) < prune_thshold):
-								self.down[0].weight[o_c_index, in_c_index, w_index, h_index] = 0
-								zero_weight_cnt += 1
 		else:
 			self.down = lambda x: x
 
@@ -163,6 +122,7 @@ class unit_gcn(nn.Module):
 		for i in range(self.num_subset):
 			conv_branch_init(self.conv_d[i], self.num_subset)
 
+
 	def forward(self, x):
 		N, C, T, V = x.size()
 		
@@ -176,16 +136,16 @@ class unit_gcn(nn.Module):
 		use_ck = True
 		for i in range(self.num_subset):
 			# 2, 900, 25
-
 			if use_ck:
 				# print(A1.size())
 				# conv_a[0](x).size() = 2, 16, 300, 25
 				# 2, 25, 4800
-				A1 = self.conv_a[i](x).permute(0, 3, 1, 2).contiguous().view(N, V, self.inter_c * T)
+				A1 = F.conv2d(x, prune(self.conv_a[i].weight), self.conv_a[i].bias)
+				A1 = A1.permute(0, 3, 1, 2).contiguous().view(N, V, self.inter_c * T)
 				# print(A2.size())
 				# 2, 4800, 25
-				A2 = self.conv_b[i](x).view(N, self.inter_c * T, V)
-
+				A2 = F.conv2d(x, prune(self.conv_b[i].weight), self.conv_b[i].bias)
+				A2 = A2.view(N, self.inter_c * T, V)
 				# 计算C
 				# matmul(A1, A2).size() = 2, 25, 25
 				# A1.size() = 2, 25, 25
@@ -197,7 +157,8 @@ class unit_gcn(nn.Module):
 				A2 = x.view(N, C * T, V)
 				A1 = A1 + A[i]
 
-				z = self.conv_d[i](torch.matmul(A2, A1).view(N, C, T, V))
+				z = F.conv2d(torch.matmul(A2, A1).view(N, C, T, V), 
+						prune(self.conv_d[i].weight), self.conv_d[i].bias)
 			
 			else:
 				A2 = x.view(N, C * T, V)
@@ -209,9 +170,6 @@ class unit_gcn(nn.Module):
 					A1 = torch.zeros(40, 25, 25).cuda()
 					A1 = A1 + A[i]
 					z = self.conv_d[i](torch.matmul(A2, A1).view(N, C, T, V))
-				# print(A2.size())
-				# print(A1.size())
-				# debug = input()
 
 			y = z + y if y is not None else z
 
@@ -220,12 +178,16 @@ class unit_gcn(nn.Module):
 		return self.relu(y)
 
 
+
 class TCN_GCN_unit(nn.Module):
 	def __init__(self, in_channels, out_channels, A, stride=1, residual=True):
 		super(TCN_GCN_unit, self).__init__()
 		self.gcn1 = unit_gcn(in_channels, out_channels, A)
 		self.tcn1 = unit_tcn(out_channels, out_channels, stride=stride)
 		self.relu = nn.ReLU()
+		self.in_channels = in_channels
+		self.out_channels = out_channels
+		self.stride = stride
 		if not residual:
 			self.residual = lambda x: 0
 
@@ -238,6 +200,7 @@ class TCN_GCN_unit(nn.Module):
 	def forward(self, x):
 		x = self.tcn1(self.gcn1(x)) + self.residual(x)
 		return self.relu(x)
+	
 
 
 class Model(nn.Module):
@@ -268,19 +231,11 @@ class Model(nn.Module):
 		self.l10 = TCN_GCN_unit(256, 256, A)
 		self.fc = nn.Linear(256, num_class)
 
-
 		nn.init.normal(self.fc.weight, 0, math.sqrt(2. / num_class))
 		bn_init(self.data_bn, 1)
 
 	def forward(self, x):
-		global out_flag
-		if(out_flag == 0):
-			print("compress rate: " + str(zero_weight_cnt / weight_cnt) + '\n')
-			out_flag = 1
-			debug = input()
-
 		N, C, T, V, M = x.size()
-		
 
 		x = x.permute(0, 4, 3, 1, 2).contiguous().view(N, M * V * C, T)
 		x = self.data_bn(x)
@@ -300,5 +255,14 @@ class Model(nn.Module):
 		x = x.view(N, M, c_new, -1)
 		x = x.mean(3).mean(1)
 		x = self.fc(x)
+
+		global zero_weight_cnt
+		global weight_cnt
+		global out_flag
+		if(out_flag == 0):
+			zero_weight_cnt = zero_weight_cnt.cpu().numpy()
+			print("debug compress rate: " + str(zero_weight_cnt / weight_cnt) + '\n')
+			debug = input()
+			out_flag = 1
 
 		return x
