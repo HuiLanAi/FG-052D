@@ -9,10 +9,10 @@ import os
 weight_cnt = 1
 zero_weight_cnt = 0
 out_flag = 0
-prune_switch = True
+prune_switch = False
 threshold = 0.015
 prune_seg_len = 4
-use_ck = True
+use_ck = False
 
 
 
@@ -173,7 +173,7 @@ class unit_gcn(nn.Module):
 
 	def forward(self, x):
 		N, C, T, V = x.size()
-		
+
 		# A = A + B
 		# A.size() = 3, 25, 25
 		A = self.A.cuda(x.get_device())
@@ -209,14 +209,33 @@ class unit_gcn(nn.Module):
 			
 			else:
 				A2 = x.view(N, C * T, V)
+				# print(x.shape)
+				# print(A2.shape)
+				# debug = input()
+				# print(A2.shape)
+				# debug = input()
+				# try:
+				# 	A1 = torch.zeros(2, 25, 25).cuda()
+				# 	A1 = A1 + A[i]
+				# 	z = self.conv_d[i](torch.matmul(A2, A1).view(N, C, T, V))
+				# except RuntimeError:
 				try:
-					A1 = torch.zeros(2, 25, 25).cuda()
+					A1 = torch.zeros(64, 25, 25).cuda()
 					A1 = A1 + A[i]
 					z = self.conv_d[i](torch.matmul(A2, A1).view(N, C, T, V))
+					# print("well done")
 				except RuntimeError:
-					A1 = torch.zeros(40, 25, 25).cuda()
-					A1 = A1 + A[i]
-					z = self.conv_d[i](torch.matmul(A2, A1).view(N, C, T, V))
+					print(x.shape)
+					print(A2.shape)
+					debug = input()
+					# 	try:
+					# 		A1 = torch.zeros(0, 0, 0).cuda()
+					# 		A1 = A1 + A[i]
+					# 		z = self.conv_d[i](torch.matmul(A2, A1).view(N, C, T, V))
+					# 	except RuntimeError:
+					# 		A1 = torch.zeros(80, 25, 25).cuda()
+					# 		A1 = A1 + A[i]
+					# 		z = self.conv_d[i](torch.matmul(A2, A1).view(N, C, T, V))
 
 			y = z + y if y is not None else z
 
