@@ -215,10 +215,16 @@ class unit_gcn(nn.Module):
 					z = F.conv2d(torch.matmul(A2, A1).view(N, C, T, V), 
 						max_seg_prune(self.conv_d[i].weight), self.conv_d[i].bias)
 				except RuntimeError:
-					A1 = torch.zeros(60, 25, 25).cuda()
-					A1 = A1 + A[i]
-					z = F.conv2d(torch.matmul(A2, A1).view(N, C, T, V), 
-						max_seg_prune(self.conv_d[i].weight), self.conv_d[i].bias)
+					try:
+						A1 = torch.zeros(60, 25, 25).cuda()
+						A1 = A1 + A[i]
+						z = F.conv2d(torch.matmul(A2, A1).view(N, C, T, V), 
+							max_seg_prune(self.conv_d[i].weight), self.conv_d[i].bias)
+					except RuntimeError:
+						A1 = torch.zeros(4, 25, 25).cuda()
+						A1 = A1 + A[i]
+						z = F.conv2d(torch.matmul(A2, A1).view(N, C, T, V), 
+							max_seg_prune(self.conv_d[i].weight), self.conv_d[i].bias)
 			
 			y = z + y if y is not None else z
 
