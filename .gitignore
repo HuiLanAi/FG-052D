@@ -1,2 +1,5 @@
 
 052c doc/052c code/aliyun_code.zip
+*.pt
+052c doc/052c code/woC/简单woC-052CwoC/agcn.py
+052c doc/052c code/woC/简单woC-052CwoC/main.py
