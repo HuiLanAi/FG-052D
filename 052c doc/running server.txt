@@ -1,4 +1,4 @@
-哈尔滨(200): woC_67%skip.training -> 
-青岛(149): null
-深圳(47): A.shape/weight.abs
+哈尔滨(200): woC_67%skip.training -> woC_67%skip_msg4woL1.training
+青岛(149): A.shape/weight.abs
+深圳(47): woC_80%skip.training
 大连(2080ti): null
