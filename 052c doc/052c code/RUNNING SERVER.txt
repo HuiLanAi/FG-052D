@@ -1,4 +1,4 @@
-哈尔滨(200): woC_67%skip.training -> woC_67%skip_msg4woL1.training -> feature.abs.mean
-青岛(149): A.shape/weight.abs -> woC90%skip.training
+哈尔滨(200): woC_67%skip.training -> woC_67%skip_msg4woL1.training -> feature.abs.mean -> dropChannelPrune.training
+青岛(149): A.shape/weight.abs -> woC90%skip.training ->
 深圳(47): woC_80%skip.training -> woC_80%skipbase90%skip.training
 大连(2080ti): null
