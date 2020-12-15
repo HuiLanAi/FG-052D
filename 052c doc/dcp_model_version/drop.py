@@ -1,6 +1,6 @@
 import os
-ratio = 0.90
-file_name = "absmean9.txt"
+ratio = 0.6
+file_name = "absmean10.txt"
 
 data = []
 drop_index = []
