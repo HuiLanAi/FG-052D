@@ -1,0 +1,13 @@
+torch.Size([1, 3, 300, 25, 2])
+torch.Size([2, 3, 300, 25]) input：2个人，3通道，300帧，25人体骨骼点
+torch.Size([2, 64, 300, 25]) l0
+torch.Size([2, 64, 300, 25]) l1
+torch.Size([2, 64, 300, 25]) l2
+torch.Size([2, 64, 300, 25]) l3
+torch.Size([2, 128, 150, 25]) l4
+torch.Size([2, 128, 150, 25]) l5
+torch.Size([2, 128, 150, 25]) l6
+torch.Size([2, 256, 75, 25]) l7
+torch.Size([2, 256, 75, 25]) l8
+torch.Size([2, 256, 75, 25]) l9
+torch.Size([1, 60]) fc
