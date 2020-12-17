@@ -31,7 +31,7 @@ total_frames = 0
 cut_frames = 0
 threshold = 0.05
 load_pretrain = True
-pretrain_model = "./backup_weight/woC-best/ntu_cv_agcn_joint_origin-59-70560.pt"
+pretrain_model = "./backup_weight/woC_dcp-53-63504.pt"
 skip_switch = False
 
 

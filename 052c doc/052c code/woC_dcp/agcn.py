@@ -9,7 +9,7 @@ import os
 weight_cnt = 1
 zero_weight_cnt = 0
 out_flag = 0
-prune_switch = False
+prune_switch = True
 threshold = 0.015
 prune_seg_len = 4
 use_ck = False
@@ -129,7 +129,16 @@ def load_drop_list(i):
 	file_name = file_prefix + "L" + str(i) + "_drop.txt"
 	f = open(file_name, "r")
 	for num in f.readlines():
-		data.append(num)
+		data.append((int)(num))
+	f.close()
+	return data
+
+def load_fc_drop_list():
+	data = []
+	file_name = "/home/winter/2s-AGCN/model/drop/fc_drop.txt"
+	f = open(file_name, "r")
+	for num in f.readlines():
+		data.append((int)(num))
 	f.close()
 	return data
 
@@ -146,7 +155,21 @@ def channel_drop_prune(weight, serial):
 		return pruned_weight
 
 
+def fc_channel_drop_prune(weight):
+	with torch.no_grad():
+		weight[:, load_fc_drop_list()] = 0
+	
+	pruned_weight = weight
+	return pruned_weight
 
+
+
+def count_sparsity(fea):
+	a, b, c, d = fea.shape
+	total = a*b*c*d
+	fea[torch.abs(fea) != 0] = 1
+	none_zero = torch.sum(fea).item()
+	print("sp: " + str(1 - (none_zero / total)) + "\n")
 
 
 
@@ -257,6 +280,8 @@ class unit_gcn(nn.Module):
 				try:
 					A1 = torch.zeros(64, 25, 25).cuda()
 					# A1 = torch.zeros(800, 25, 25).cuda()
+					# A1 = torch.zeros(400, 25, 25).cuda()
+
 					A1 = A1 + A[i]
 					if(prune_switch):
 						z = F.conv2d(torch.matmul(A2, A1).view(N, C, T, V), channel_drop_prune(self.conv_d[i].weight, self.serial), self.conv_d[i].bias)
@@ -361,14 +386,18 @@ class Model(nn.Module):
 		x = self.l9(x)
 		x = self.l10(x)
 
+
 		c_new = x.size(1)
 		x = x.view(N, M, c_new, -1)
 		x = x.mean(3).mean(1)
-		# if(prune_switch):
-		# 	x = F.linear(x, fc_max_seg_prune(self.fc.weight), self.fc.bias)
-		# else:
-		# 	x = self.fc(x)
-		x = self.fc(x)
+		if(prune_switch):
+			# print(self.fc.weight.shape)
+			# print("cnmcnmcnm")
+			# debug = input()
+			x = F.linear(x, fc_channel_drop_prune(self.fc.weight), self.fc.bias)
+		else:
+			x = self.fc(x)
+		# x = self.fc(x)
 
 
 		return x
