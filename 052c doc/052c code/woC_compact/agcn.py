@@ -232,8 +232,8 @@ class unit_gcn(nn.Module):
 			else:
 				A2 = x.view(N, C * T, V)
 				try:
-					A1 = torch.zeros(64, 25, 25).cuda()
-					# A1 = torch.zeros(800, 25, 25).cuda()
+					# A1 = torch.zeros(104, 25, 25).cuda()
+					A1 = torch.zeros(800, 25, 25).cuda()
 
 					A1 = A1 + A[i]
 					if(prune_switch):
@@ -242,7 +242,8 @@ class unit_gcn(nn.Module):
 						z = self.conv_d[i](torch.matmul(A2, A1).view(N, C, T, V))
 				except RuntimeError:
 					try:
-						A1 = torch.zeros(60, 25, 25).cuda()
+						A1 = torch.zeros(160, 25, 25).cuda()
+						# A1 = torch.zeros(60, 25, 25).cuda()
 						A1 = A1 + A[i]
 						if(prune_switch):
 							z = F.conv2d(torch.matmul(A2, A1).view(N, C, T, V), max_seg_prune(self.conv_d[i].weight), self.conv_d[i].bias)
@@ -250,8 +251,8 @@ class unit_gcn(nn.Module):
 							z = self.conv_d[i](torch.matmul(A2, A1).view(N, C, T, V))
 					except RuntimeError:
 						# A1 = torch.zeros(4, 25, 25).cuda()
-						A1 = torch.zeros(144, 25, 25).cuda()
-						# A1 = torch.zeros(264, 25, 25).cuda()
+						# A1 = torch.zeros(144, 25, 25).cuda()
+						A1 = torch.zeros(264, 25, 25).cuda()
 
 						A1 = A1 + A[i]
 						if(prune_switch):
