@@ -7,15 +7,16 @@ drop_index = []
 
 def gen_drop_channel(f_abs_mean, ratio, serial):
     f = open(f_abs_mean, "r")
+    abs_mean = []
     for num in f.readlines():
         abs_mean.append(float(num))
     f.close()
     drop_num = (int)(ratio * len(abs_mean))
 
     for i in range (drop_num):
-        index = data.index(min(abs_mean))
+        index = abs_mean.index(min(abs_mean))
         drop_index.append(index)
-        data[index] = 1000
+        abs_mean[index] = 1000
     
     if serial < 10: 
         dst_name = "L" + str(serial) + "_drop.txt"
