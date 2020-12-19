@@ -1,4 +1,4 @@
 哈尔滨(200): woC_67%skip.training -> woC_67%skip_msg4woL1.training -> feature.abs.mean -> woC_dropChannelPrune.training -> woC_dcpfc0.training ->woC_dcpfc0cmpt50.training
-青岛(149): A.shape/weight.abs -> woC90%skip.training ->woC_dcpL1-3.training -> woC_80%skipdcp.training -> null -> woC_dcp.training -> woC_dcpbasefc0.training
+青岛(149): A.shape/weight.abs -> woC90%skip.training ->woC_dcpL1-3.training -> woC_80%skipdcp.training -> null -> woC_dcp.training -> woC_dcpbasefc0.training -> woC_113dcpfc0cmpt50.training
 深圳(47): woC_80%skip.training -> woC_80%skipbase90%skip.training ->null -> compress -> woC_cmpt50.training -> woC_cmpt67.training3 -> woC_schpr.training
 大连(2080ti): null
