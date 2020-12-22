@@ -166,14 +166,6 @@ def conv9x1_prune(weight):
 		for j in range (0, 8):
 			for i in range (j, in_c, 8):
 				pruned_weight[:, i, cavity_list[j], :] = 0
-		# pruned_weight[:, [i for i in range(1, in_c, 8)], cavity_list[1], :] = 0
-		# pruned_weight[:, [i for i in range(2, in_c, 8)], cavity_list[2], :] = 0
-		# pruned_weight[:, [i for i in range(3, in_c, 8)], cavity_list[3], :] = 0
-		# pruned_weight[:, [i for i in range(4, in_c, 8)], cavity_list[4], :] = 0
-		# pruned_weight[:, [i for i in range(5, in_c, 8)], cavity_list[5], :] = 0
-		# pruned_weight[:, [i for i in range(6, in_c, 8)], cavity_list[6], :] = 0
-		# pruned_weight[:, [i for i in range(7, in_c, 8)], cavity_list[7], :] = 0
-	
 	pruned_weight_grad = pruned_weight
 	return pruned_weight_grad
 
