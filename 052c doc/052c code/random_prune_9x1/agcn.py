@@ -402,9 +402,9 @@ class TCN_GCN_unit(nn.Module):
 	def forward(self, x):
 		x = self.tcn1(self.gcn1(x)) + self.residual(x)
 		return self.relu(x)
+
 	
 forward_cnt = 0
-
 
 class Model(nn.Module):
 	def __init__(self, num_class=60, num_point=25, num_person=2, graph=None, graph_args=dict(), in_channels=3):
