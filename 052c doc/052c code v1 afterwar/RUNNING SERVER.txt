@@ -1,4 +1,4 @@
 after-disaster
 杭州(200)：woC_cov1xrd70.val -> woC_cov1xrd70.training
-青岛(149)：woC_113dcp.val -> woC_113dcp.training
+青岛(149)：woC_113dcp.val -> woC_113dcp.training -> woC_113dcpfc.training
 沈阳(47)：woC_116dcp1.training
