@@ -1,4 +1,4 @@
 after-disaster
-杭州(200)：woC_cov1xrd70.val -> woC_cov1xrd70.training -> woC_cov1xrd70fc.training -> woC_cov1xrd70fccov9xrd70.training
-青岛(149)：woC_113dcp.val -> woC_113dcp.training -> woC_113dcpfc.training -> woC_113dcpfctsp.training
-沈阳(47)：woC_116dcp1.training -> woC_116dcp1fc.training -> -> woC_116dcp1fctsp1.training
+杭州(200)：woC_cov1xrd70.val -> woC_cov1xrd70.training -> woC_cov1xrd70fc.training -> woC_cov1xrd70fccov9xrd70.training-> woC_cov1xrd70fccov9xrd70cmpt50.training
+青岛(149)：woC_113dcp.val -> woC_113dcp.training -> woC_113dcpfc.training -> woC_113dcpfctsp.training -> woC_113dcpfctspcmpt50.training -> woC_113dcpfctspcmpt67.training
+沈阳(47)：woC_116dcp1.training -> woC_116dcp1fc.training -> woC_116dcp1fctsp1.training -> woC_116dcp1fctsp1cmpt50.training
