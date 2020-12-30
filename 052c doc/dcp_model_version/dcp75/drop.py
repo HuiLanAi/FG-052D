@@ -1,11 +1,8 @@
 import os
 file_name = "absmean10.txt"
 
-data = []
-drop_index = []
-
-
 def gen_drop_channel(f_abs_mean, ratio, serial):
+    drop_index = []
     f = open(f_abs_mean, "r")
     abs_mean = []
     for num in f.readlines():
