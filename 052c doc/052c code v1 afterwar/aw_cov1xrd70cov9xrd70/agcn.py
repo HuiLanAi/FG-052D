@@ -519,11 +519,11 @@ class Model(nn.Module):
 		else:
 			x = self.fc(x)
 
-		if(forward_cnt == 100 and conv9x1_prune_switch):
-			print("prune rate: " + str(zero_size / total_size))
-			forward_cnt = 0
-		else:
-			forward_cnt += 1
+		# if(forward_cnt == 100 and conv9x1_prune_switch):
+		# 	print("prune rate: " + str(zero_size / total_size))
+		# 	forward_cnt = 0
+		# else:
+		# 	forward_cnt += 1
 
 		zero_size = 0
 		total_size = 0
