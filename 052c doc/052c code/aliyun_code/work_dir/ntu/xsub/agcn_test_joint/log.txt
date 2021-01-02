@@ -1,3 +1,0 @@
-[ Wed Nov 20 22:44:14 2019 ] Load weights from ./runs/ntu_cs_agcn_joint-35-45072.pt.
-[ Sun Dec  8 09:42:25 2019 ] Load weights from ./runs/ntu_cs_agcn_joint-47-60096.pt.
-[ Sun Dec  8 09:53:41 2019 ] Load weights from ./runs/ntu_cs_agcn_joint-45-57592.pt.
