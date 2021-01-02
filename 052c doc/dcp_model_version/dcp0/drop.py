@@ -40,6 +40,6 @@ def load_ratio(f_ratio):
 
 ratio = load_ratio("droprate.txt")
 
-for i in range (10):
+for i in range (9):
     f_abs_mean = "absmean" + str(i+1) + ".txt"
     gen_drop_channel(f_abs_mean, ratio[i], i+1)
