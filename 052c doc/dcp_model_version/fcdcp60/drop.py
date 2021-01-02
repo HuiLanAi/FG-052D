@@ -1,11 +1,7 @@
 import os
-file_name = "absmean10.txt"
-
-data = []
-drop_index = []
-
 
 def gen_drop_channel(f_abs_mean, ratio, serial):
+    drop_index = []
     f = open(f_abs_mean, "r")
     abs_mean = []
     for num in f.readlines():
@@ -43,6 +39,5 @@ def load_ratio(f_ratio):
 
 ratio = load_ratio("droprate.txt")
 
-for i in range (10):
-    f_abs_mean = "absmean" + str(i+1) + ".txt"
-    gen_drop_channel(f_abs_mean, ratio[i], i+1)
+f_abs_mean = "dcp0_fcmean_abs.txt"
+gen_drop_channel(f_abs_mean, ratio[0], 0)
