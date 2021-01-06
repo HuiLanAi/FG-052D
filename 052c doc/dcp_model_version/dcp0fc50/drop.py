@@ -38,10 +38,11 @@ def load_ratio(f_ratio):
 
 
 
-ratio = load_ratio("droprate.txt")
+# ratio = load_ratio("droprate.txt")
 
-for i in range (10):
-    if i in [7, 8, 9]:
-        f_abs_mean = "abs_" + str(i+1) + ".txt"
-        gen_drop_channel(f_abs_mean, ratio[i], i+1)
+# for i in range (9):
+#     f_abs_mean = "absmean" + str(i+1) + ".txt"
+#     gen_drop_channel(f_abs_mean, ratio[i], i+1)
 
+
+gen_drop_channel("abs_10.txt", 0.5, 10)
