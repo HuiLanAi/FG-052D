@@ -1,0 +1,1364 @@
+[ Sun Nov 10 10:18:22 2019 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 32, 'train_feeder_args': {'data_path': './data/ntu/xview/train_data_joint.npy', 'label_path': './data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': './data/ntu/xview/val_data_joint.npy', 'label_path': './data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1, 2, 3], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 64, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Sun Nov 10 10:18:22 2019 ] Training epoch: 1
+[ Sun Nov 10 10:19:30 2019 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 32, 'train_feeder_args': {'data_path': './data/ntu/xview/train_data_joint.npy', 'label_path': './data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': './data/ntu/xview/val_data_joint.npy', 'label_path': './data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1, 2, 3], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 64, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Sun Nov 10 10:19:30 2019 ] Training epoch: 1
+[ Tue Nov 12 10:35:09 2019 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 32, 'train_feeder_args': {'data_path': './data/ntu/xview/train_data_joint.npy', 'label_path': './data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': './data/ntu/xview/val_data_joint.npy', 'label_path': './data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [3], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 64, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Tue Nov 12 10:35:09 2019 ] Training epoch: 1
+[ Fri Nov 15 00:27:30 2019 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 32, 'train_feeder_args': {'data_path': './data/ntu/xview/train_data_joint.npy', 'label_path': './data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': './data/ntu/xview/val_data_joint.npy', 'label_path': './data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [5, 7], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 64, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Fri Nov 15 00:27:30 2019 ] Training epoch: 1
+[ Sun Nov 17 21:56:33 2019 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 32, 'train_feeder_args': {'data_path': './data/ntu/xview/train_data_joint.npy', 'label_path': './data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': './data/ntu/xview/val_data_joint.npy', 'label_path': './data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [5, 7], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 64, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Sun Nov 17 21:56:33 2019 ] Training epoch: 1
+[ Mon Nov 18 10:15:55 2019 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 32, 'train_feeder_args': {'data_path': './data/ntu/xview/train_data_joint.npy', 'label_path': './data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': './data/ntu/xview/val_data_joint.npy', 'label_path': './data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [5, 7], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 64, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Mon Nov 18 10:15:55 2019 ] Training epoch: 1
+[ Mon Nov 18 10:34:29 2019 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 32, 'train_feeder_args': {'data_path': './data/ntu/xview/train_data_joint.npy', 'label_path': './data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': './data/ntu/xview/val_data_joint.npy', 'label_path': './data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [5, 7], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 64, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Mon Nov 18 10:34:29 2019 ] Training epoch: 1
+[ Mon Nov 18 10:34:55 2019 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 32, 'train_feeder_args': {'data_path': './data/ntu/xview/train_data_joint.npy', 'label_path': './data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': './data/ntu/xview/val_data_joint.npy', 'label_path': './data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [5, 7], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 32, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Mon Nov 18 10:34:55 2019 ] Training epoch: 1
+[ Mon Nov 18 11:04:18 2019 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 32, 'train_feeder_args': {'data_path': './data/ntu/xview/train_data_joint.npy', 'label_path': './data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': './data/ntu/xview/val_data_joint.npy', 'label_path': './data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [5, 7], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 32, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Mon Nov 18 11:04:18 2019 ] Training epoch: 1
+[ Mon Nov 18 20:40:03 2019 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 32, 'train_feeder_args': {'data_path': './data/ntu/xview/train_data_joint.npy', 'label_path': './data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': './data/ntu/xview/val_data_joint.npy', 'label_path': './data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [5, 7], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 32, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Mon Nov 18 20:40:03 2019 ] Training epoch: 1
+[ Mon Nov 18 22:02:59 2019 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 32, 'train_feeder_args': {'data_path': './data/ntu/xview/train_data_joint.npy', 'label_path': './data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': './data/ntu/xview/val_data_joint.npy', 'label_path': './data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [5, 7], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 32, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Mon Nov 18 22:02:59 2019 ] Training epoch: 1
+[ Mon Nov 18 22:22:29 2019 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 32, 'train_feeder_args': {'data_path': './data/ntu/xview/train_data_joint.npy', 'label_path': './data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': './data/ntu/xview/val_data_joint.npy', 'label_path': './data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [5, 7], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 32, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Mon Nov 18 22:22:29 2019 ] Training epoch: 1
+[ Mon Nov 18 22:24:30 2019 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 32, 'train_feeder_args': {'data_path': './data/ntu/xview/train_data_joint.npy', 'label_path': './data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': './data/ntu/xview/val_data_joint.npy', 'label_path': './data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [5, 7], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 32, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Mon Nov 18 22:24:30 2019 ] Training epoch: 1
+[ Mon Nov 18 22:26:35 2019 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 32, 'train_feeder_args': {'data_path': './data/ntu/xview/train_data_joint.npy', 'label_path': './data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': './data/ntu/xview/val_data_joint.npy', 'label_path': './data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [5, 7], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 32, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Mon Nov 18 22:26:35 2019 ] Training epoch: 1
+[ Mon Nov 18 22:30:03 2019 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 32, 'train_feeder_args': {'data_path': './data/ntu/xview/train_data_joint.npy', 'label_path': './data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': './data/ntu/xview/val_data_joint.npy', 'label_path': './data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [5, 7], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 32, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Mon Nov 18 22:30:04 2019 ] Training epoch: 1
+[ Tue Nov 19 11:14:52 2019 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 32, 'train_feeder_args': {'data_path': './data/ntu/xview/train_data_joint.npy', 'label_path': './data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': './data/ntu/xview/val_data_joint.npy', 'label_path': './data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [5, 7], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 32, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Tue Nov 19 11:14:52 2019 ] Training epoch: 1
+[ Tue Nov 19 11:17:15 2019 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 32, 'train_feeder_args': {'data_path': './data/ntu/xview/train_data_joint.npy', 'label_path': './data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': './data/ntu/xview/val_data_joint.npy', 'label_path': './data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [5, 7], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 32, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Tue Nov 19 11:17:15 2019 ] Training epoch: 1
+[ Tue Nov 19 11:29:32 2019 ] 	Mean training loss: 3.0360.
+[ Tue Nov 19 11:29:32 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 11:29:32 2019 ] Eval epoch: 1
+[ Tue Nov 19 11:33:50 2019 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 32, 'train_feeder_args': {'data_path': './data/ntu/xview/train_data_joint.npy', 'label_path': './data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': './data/ntu/xview/val_data_joint.npy', 'label_path': './data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [5, 7], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 32, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Tue Nov 19 11:33:50 2019 ] Training epoch: 1
+[ Tue Nov 19 11:46:03 2019 ] 	Mean training loss: 3.0360.
+[ Tue Nov 19 11:46:03 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 11:46:03 2019 ] Eval epoch: 1
+[ Tue Nov 19 14:33:07 2019 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 32, 'train_feeder_args': {'data_path': './data/ntu/xview/train_data_joint.npy', 'label_path': './data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': './data/ntu/xview/val_data_joint.npy', 'label_path': './data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [5, 7], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 32, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Tue Nov 19 14:33:07 2019 ] Training epoch: 1
+[ Tue Nov 19 14:45:24 2019 ] 	Mean training loss: 3.0360.
+[ Tue Nov 19 14:45:24 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 14:45:24 2019 ] Eval epoch: 1
+[ Tue Nov 19 14:47:00 2019 ] 	Mean test loss of 592 batches: 3.4293408418023907.
+[ Tue Nov 19 14:47:00 2019 ] 	Top1: 33.25%
+[ Tue Nov 19 14:47:00 2019 ] 	Top5: 67.94%
+[ Tue Nov 19 14:47:00 2019 ] Training epoch: 2
+[ Tue Nov 19 14:49:06 2019 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 32, 'train_feeder_args': {'data_path': './data/ntu/xview/train_data_joint.npy', 'label_path': './data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': './data/ntu/xview/val_data_joint.npy', 'label_path': './data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [5, 7], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 32, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Tue Nov 19 14:49:06 2019 ] Training epoch: 1
+[ Tue Nov 19 15:01:26 2019 ] 	Mean training loss: 3.0360.
+[ Tue Nov 19 15:01:26 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 15:01:26 2019 ] Eval epoch: 1
+[ Tue Nov 19 15:03:04 2019 ] 	Mean test loss of 592 batches: 3.4293408418023907.
+[ Tue Nov 19 15:03:04 2019 ] 	Top1: 33.25%
+[ Tue Nov 19 15:03:04 2019 ] 	Top5: 67.94%
+[ Tue Nov 19 15:03:04 2019 ] Training epoch: 2
+[ Tue Nov 19 15:15:19 2019 ] 	Mean training loss: 1.8895.
+[ Tue Nov 19 15:15:19 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 15:15:19 2019 ] Eval epoch: 2
+[ Tue Nov 19 15:16:56 2019 ] 	Mean test loss of 592 batches: 1.1868140739766326.
+[ Tue Nov 19 15:16:56 2019 ] 	Top1: 62.81%
+[ Tue Nov 19 15:16:56 2019 ] 	Top5: 92.86%
+[ Tue Nov 19 15:16:56 2019 ] Training epoch: 3
+[ Tue Nov 19 15:29:09 2019 ] 	Mean training loss: 1.4174.
+[ Tue Nov 19 15:29:09 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 15:29:09 2019 ] Eval epoch: 3
+[ Tue Nov 19 15:30:46 2019 ] 	Mean test loss of 592 batches: 0.8967756178431414.
+[ Tue Nov 19 15:30:46 2019 ] 	Top1: 71.07%
+[ Tue Nov 19 15:30:46 2019 ] 	Top5: 95.31%
+[ Tue Nov 19 15:30:46 2019 ] Training epoch: 4
+[ Tue Nov 19 15:43:01 2019 ] 	Mean training loss: 1.1542.
+[ Tue Nov 19 15:43:01 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 15:43:01 2019 ] Eval epoch: 4
+[ Tue Nov 19 15:44:37 2019 ] 	Mean test loss of 592 batches: 0.8697518252742451.
+[ Tue Nov 19 15:44:37 2019 ] 	Top1: 72.82%
+[ Tue Nov 19 15:44:37 2019 ] 	Top5: 95.75%
+[ Tue Nov 19 15:44:37 2019 ] Training epoch: 5
+[ Tue Nov 19 15:56:53 2019 ] 	Mean training loss: 1.0014.
+[ Tue Nov 19 15:56:53 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 15:56:53 2019 ] Eval epoch: 5
+[ Tue Nov 19 15:58:29 2019 ] 	Mean test loss of 592 batches: 0.6376532706608241.
+[ Tue Nov 19 15:58:29 2019 ] 	Top1: 79.10%
+[ Tue Nov 19 15:58:30 2019 ] 	Top5: 97.48%
+[ Tue Nov 19 15:58:30 2019 ] Training epoch: 6
+[ Tue Nov 19 16:10:44 2019 ] 	Mean training loss: 0.8879.
+[ Tue Nov 19 16:10:44 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 16:10:44 2019 ] Eval epoch: 6
+[ Tue Nov 19 16:12:21 2019 ] 	Mean test loss of 592 batches: 0.9484072594676871.
+[ Tue Nov 19 16:12:21 2019 ] 	Top1: 70.82%
+[ Tue Nov 19 16:12:21 2019 ] 	Top5: 94.47%
+[ Tue Nov 19 16:12:21 2019 ] Training epoch: 7
+[ Tue Nov 19 16:24:35 2019 ] 	Mean training loss: 0.8023.
+[ Tue Nov 19 16:24:35 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 16:24:35 2019 ] Eval epoch: 7
+[ Tue Nov 19 16:26:12 2019 ] 	Mean test loss of 592 batches: 0.556481407074308.
+[ Tue Nov 19 16:26:12 2019 ] 	Top1: 82.53%
+[ Tue Nov 19 16:26:12 2019 ] 	Top5: 97.89%
+[ Tue Nov 19 16:26:12 2019 ] Training epoch: 8
+[ Tue Nov 19 16:38:27 2019 ] 	Mean training loss: 0.7394.
+[ Tue Nov 19 16:38:27 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 16:38:27 2019 ] Eval epoch: 8
+[ Tue Nov 19 16:40:04 2019 ] 	Mean test loss of 592 batches: 0.4920396619803599.
+[ Tue Nov 19 16:40:04 2019 ] 	Top1: 84.28%
+[ Tue Nov 19 16:40:04 2019 ] 	Top5: 98.21%
+[ Tue Nov 19 16:40:04 2019 ] Training epoch: 9
+[ Tue Nov 19 16:52:18 2019 ] 	Mean training loss: 0.6927.
+[ Tue Nov 19 16:52:18 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 16:52:18 2019 ] Eval epoch: 9
+[ Tue Nov 19 16:53:54 2019 ] 	Mean test loss of 592 batches: 0.4867103154947226.
+[ Tue Nov 19 16:53:54 2019 ] 	Top1: 84.01%
+[ Tue Nov 19 16:53:55 2019 ] 	Top5: 98.25%
+[ Tue Nov 19 16:53:55 2019 ] Training epoch: 10
+[ Tue Nov 19 17:06:09 2019 ] 	Mean training loss: 0.6604.
+[ Tue Nov 19 17:06:09 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 17:06:09 2019 ] Eval epoch: 10
+[ Tue Nov 19 17:07:46 2019 ] 	Mean test loss of 592 batches: 0.47472628027301383.
+[ Tue Nov 19 17:07:46 2019 ] 	Top1: 84.61%
+[ Tue Nov 19 17:07:46 2019 ] 	Top5: 98.27%
+[ Tue Nov 19 17:07:46 2019 ] Training epoch: 11
+[ Tue Nov 19 17:20:00 2019 ] 	Mean training loss: 0.6257.
+[ Tue Nov 19 17:20:00 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 17:20:00 2019 ] Eval epoch: 11
+[ Tue Nov 19 17:21:37 2019 ] 	Mean test loss of 592 batches: 0.444102955352817.
+[ Tue Nov 19 17:21:37 2019 ] 	Top1: 85.47%
+[ Tue Nov 19 17:21:37 2019 ] 	Top5: 98.35%
+[ Tue Nov 19 17:21:37 2019 ] Training epoch: 12
+[ Tue Nov 19 17:33:51 2019 ] 	Mean training loss: 0.6005.
+[ Tue Nov 19 17:33:51 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 17:33:51 2019 ] Eval epoch: 12
+[ Tue Nov 19 17:35:28 2019 ] 	Mean test loss of 592 batches: 0.4325513392435135.
+[ Tue Nov 19 17:35:28 2019 ] 	Top1: 86.15%
+[ Tue Nov 19 17:35:28 2019 ] 	Top5: 98.29%
+[ Tue Nov 19 17:35:28 2019 ] Training epoch: 13
+[ Tue Nov 19 17:47:42 2019 ] 	Mean training loss: 0.5734.
+[ Tue Nov 19 17:47:42 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 17:47:42 2019 ] Eval epoch: 13
+[ Tue Nov 19 17:49:18 2019 ] 	Mean test loss of 592 batches: 0.4086719537657258.
+[ Tue Nov 19 17:49:19 2019 ] 	Top1: 87.20%
+[ Tue Nov 19 17:49:19 2019 ] 	Top5: 98.45%
+[ Tue Nov 19 17:49:19 2019 ] Training epoch: 14
+[ Tue Nov 19 18:01:33 2019 ] 	Mean training loss: 0.5469.
+[ Tue Nov 19 18:01:33 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 18:01:33 2019 ] Eval epoch: 14
+[ Tue Nov 19 18:03:09 2019 ] 	Mean test loss of 592 batches: 0.4213238694528873.
+[ Tue Nov 19 18:03:09 2019 ] 	Top1: 86.41%
+[ Tue Nov 19 18:03:10 2019 ] 	Top5: 98.29%
+[ Tue Nov 19 18:03:10 2019 ] Training epoch: 15
+[ Tue Nov 19 18:15:24 2019 ] 	Mean training loss: 0.5326.
+[ Tue Nov 19 18:15:24 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 18:15:24 2019 ] Eval epoch: 15
+[ Tue Nov 19 18:17:01 2019 ] 	Mean test loss of 592 batches: 0.37483493049905914.
+[ Tue Nov 19 18:17:01 2019 ] 	Top1: 88.11%
+[ Tue Nov 19 18:17:01 2019 ] 	Top5: 98.67%
+[ Tue Nov 19 18:17:01 2019 ] Training epoch: 16
+[ Tue Nov 19 18:29:16 2019 ] 	Mean training loss: 0.5171.
+[ Tue Nov 19 18:29:16 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 18:29:16 2019 ] Eval epoch: 16
+[ Tue Nov 19 18:30:53 2019 ] 	Mean test loss of 592 batches: 0.360514155299579.
+[ Tue Nov 19 18:30:53 2019 ] 	Top1: 88.50%
+[ Tue Nov 19 18:30:53 2019 ] 	Top5: 98.71%
+[ Tue Nov 19 18:30:53 2019 ] Training epoch: 17
+[ Tue Nov 19 18:43:07 2019 ] 	Mean training loss: 0.4994.
+[ Tue Nov 19 18:43:07 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 18:43:07 2019 ] Eval epoch: 17
+[ Tue Nov 19 18:44:44 2019 ] 	Mean test loss of 592 batches: 0.3693822391482221.
+[ Tue Nov 19 18:44:44 2019 ] 	Top1: 88.28%
+[ Tue Nov 19 18:44:44 2019 ] 	Top5: 98.64%
+[ Tue Nov 19 18:44:44 2019 ] Training epoch: 18
+[ Tue Nov 19 18:56:58 2019 ] 	Mean training loss: 0.4792.
+[ Tue Nov 19 18:56:58 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 18:56:58 2019 ] Eval epoch: 18
+[ Tue Nov 19 18:58:35 2019 ] 	Mean test loss of 592 batches: 0.36132364941609874.
+[ Tue Nov 19 18:58:35 2019 ] 	Top1: 88.34%
+[ Tue Nov 19 18:58:35 2019 ] 	Top5: 98.69%
+[ Tue Nov 19 18:58:35 2019 ] Training epoch: 19
+[ Tue Nov 19 19:10:51 2019 ] 	Mean training loss: 0.4689.
+[ Tue Nov 19 19:10:51 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 19:10:51 2019 ] Eval epoch: 19
+[ Tue Nov 19 19:12:27 2019 ] 	Mean test loss of 592 batches: 0.34460839737408067.
+[ Tue Nov 19 19:12:27 2019 ] 	Top1: 89.08%
+[ Tue Nov 19 19:12:28 2019 ] 	Top5: 98.73%
+[ Tue Nov 19 19:12:28 2019 ] Training epoch: 20
+[ Tue Nov 19 19:24:41 2019 ] 	Mean training loss: 0.4616.
+[ Tue Nov 19 19:24:41 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 19:24:42 2019 ] Eval epoch: 20
+[ Tue Nov 19 19:26:18 2019 ] 	Mean test loss of 592 batches: 0.3776124497070103.
+[ Tue Nov 19 19:26:18 2019 ] 	Top1: 87.98%
+[ Tue Nov 19 19:26:18 2019 ] 	Top5: 98.64%
+[ Tue Nov 19 19:26:18 2019 ] Training epoch: 21
+[ Tue Nov 19 19:38:34 2019 ] 	Mean training loss: 0.4411.
+[ Tue Nov 19 19:38:34 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 19:38:34 2019 ] Eval epoch: 21
+[ Tue Nov 19 19:40:10 2019 ] 	Mean test loss of 592 batches: 0.44181456253234597.
+[ Tue Nov 19 19:40:10 2019 ] 	Top1: 86.05%
+[ Tue Nov 19 19:40:10 2019 ] 	Top5: 98.33%
+[ Tue Nov 19 19:40:10 2019 ] Training epoch: 22
+[ Tue Nov 19 19:52:24 2019 ] 	Mean training loss: 0.4359.
+[ Tue Nov 19 19:52:24 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 19:52:24 2019 ] Eval epoch: 22
+[ Tue Nov 19 19:54:01 2019 ] 	Mean test loss of 592 batches: 0.35172437136439055.
+[ Tue Nov 19 19:54:01 2019 ] 	Top1: 88.98%
+[ Tue Nov 19 19:54:01 2019 ] 	Top5: 98.64%
+[ Tue Nov 19 19:54:01 2019 ] Training epoch: 23
+[ Tue Nov 19 20:06:16 2019 ] 	Mean training loss: 0.4191.
+[ Tue Nov 19 20:06:16 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 20:06:16 2019 ] Eval epoch: 23
+[ Tue Nov 19 20:07:53 2019 ] 	Mean test loss of 592 batches: 0.3633158147284711.
+[ Tue Nov 19 20:07:53 2019 ] 	Top1: 88.79%
+[ Tue Nov 19 20:07:53 2019 ] 	Top5: 98.61%
+[ Tue Nov 19 20:07:53 2019 ] Training epoch: 24
+[ Tue Nov 19 20:20:07 2019 ] 	Mean training loss: 0.4133.
+[ Tue Nov 19 20:20:07 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 20:20:07 2019 ] Eval epoch: 24
+[ Tue Nov 19 20:21:44 2019 ] 	Mean test loss of 592 batches: 0.3584671108102476.
+[ Tue Nov 19 20:21:44 2019 ] 	Top1: 88.59%
+[ Tue Nov 19 20:21:44 2019 ] 	Top5: 98.70%
+[ Tue Nov 19 20:21:44 2019 ] Training epoch: 25
+[ Tue Nov 19 20:34:00 2019 ] 	Mean training loss: 0.4014.
+[ Tue Nov 19 20:34:00 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 20:34:00 2019 ] Eval epoch: 25
+[ Tue Nov 19 20:35:36 2019 ] 	Mean test loss of 592 batches: 0.331970200320152.
+[ Tue Nov 19 20:35:36 2019 ] 	Top1: 89.31%
+[ Tue Nov 19 20:35:36 2019 ] 	Top5: 98.75%
+[ Tue Nov 19 20:35:36 2019 ] Training epoch: 26
+[ Tue Nov 19 20:47:50 2019 ] 	Mean training loss: 0.3971.
+[ Tue Nov 19 20:47:50 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 20:47:50 2019 ] Eval epoch: 26
+[ Tue Nov 19 20:49:27 2019 ] 	Mean test loss of 592 batches: 0.3557220104628721.
+[ Tue Nov 19 20:49:27 2019 ] 	Top1: 88.83%
+[ Tue Nov 19 20:49:27 2019 ] 	Top5: 98.53%
+[ Tue Nov 19 20:49:27 2019 ] Training epoch: 27
+[ Tue Nov 19 21:01:42 2019 ] 	Mean training loss: 0.3817.
+[ Tue Nov 19 21:01:42 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 21:01:42 2019 ] Eval epoch: 27
+[ Tue Nov 19 21:03:19 2019 ] 	Mean test loss of 592 batches: 0.3879138991815617.
+[ Tue Nov 19 21:03:19 2019 ] 	Top1: 88.33%
+[ Tue Nov 19 21:03:19 2019 ] 	Top5: 98.47%
+[ Tue Nov 19 21:03:19 2019 ] Training epoch: 28
+[ Tue Nov 19 21:15:34 2019 ] 	Mean training loss: 0.3733.
+[ Tue Nov 19 21:15:34 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 21:15:34 2019 ] Eval epoch: 28
+[ Tue Nov 19 21:17:10 2019 ] 	Mean test loss of 592 batches: 0.3271197020453778.
+[ Tue Nov 19 21:17:10 2019 ] 	Top1: 89.80%
+[ Tue Nov 19 21:17:11 2019 ] 	Top5: 98.77%
+[ Tue Nov 19 21:17:11 2019 ] Training epoch: 29
+[ Tue Nov 19 21:29:25 2019 ] 	Mean training loss: 0.3745.
+[ Tue Nov 19 21:29:25 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 21:29:25 2019 ] Eval epoch: 29
+[ Tue Nov 19 21:31:01 2019 ] 	Mean test loss of 592 batches: 0.37120212883864706.
+[ Tue Nov 19 21:31:01 2019 ] 	Top1: 88.71%
+[ Tue Nov 19 21:31:01 2019 ] 	Top5: 98.76%
+[ Tue Nov 19 21:31:01 2019 ] Training epoch: 30
+[ Tue Nov 19 21:43:16 2019 ] 	Mean training loss: 0.3582.
+[ Tue Nov 19 21:43:16 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 21:43:16 2019 ] Eval epoch: 30
+[ Tue Nov 19 21:44:52 2019 ] 	Mean test loss of 592 batches: 0.4093630498627553.
+[ Tue Nov 19 21:44:52 2019 ] 	Top1: 87.38%
+[ Tue Nov 19 21:44:52 2019 ] 	Top5: 98.35%
+[ Tue Nov 19 21:44:52 2019 ] Training epoch: 31
+[ Tue Nov 19 21:57:08 2019 ] 	Mean training loss: 0.1586.
+[ Tue Nov 19 21:57:08 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 21:57:08 2019 ] Eval epoch: 31
+[ Tue Nov 19 21:58:45 2019 ] 	Mean test loss of 592 batches: 0.20769219360993924.
+[ Tue Nov 19 21:58:45 2019 ] 	Top1: 93.52%
+[ Tue Nov 19 21:58:45 2019 ] 	Top5: 99.15%
+[ Tue Nov 19 21:58:45 2019 ] Training epoch: 32
+[ Tue Nov 19 22:11:00 2019 ] 	Mean training loss: 0.0977.
+[ Tue Nov 19 22:11:00 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 22:11:00 2019 ] Eval epoch: 32
+[ Tue Nov 19 22:12:37 2019 ] 	Mean test loss of 592 batches: 0.20542877187600006.
+[ Tue Nov 19 22:12:37 2019 ] 	Top1: 93.79%
+[ Tue Nov 19 22:12:37 2019 ] 	Top5: 99.14%
+[ Tue Nov 19 22:12:37 2019 ] Training epoch: 33
+[ Tue Nov 19 22:24:52 2019 ] 	Mean training loss: 0.0758.
+[ Tue Nov 19 22:24:52 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 22:24:52 2019 ] Eval epoch: 33
+[ Tue Nov 19 22:26:29 2019 ] 	Mean test loss of 592 batches: 0.21088486140895937.
+[ Tue Nov 19 22:26:29 2019 ] 	Top1: 93.84%
+[ Tue Nov 19 22:26:29 2019 ] 	Top5: 99.15%
+[ Tue Nov 19 22:26:29 2019 ] Training epoch: 34
+[ Tue Nov 19 22:38:43 2019 ] 	Mean training loss: 0.0582.
+[ Tue Nov 19 22:38:43 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 22:38:43 2019 ] Eval epoch: 34
+[ Tue Nov 19 22:40:20 2019 ] 	Mean test loss of 592 batches: 0.21302888469418158.
+[ Tue Nov 19 22:40:20 2019 ] 	Top1: 93.97%
+[ Tue Nov 19 22:40:20 2019 ] 	Top5: 99.09%
+[ Tue Nov 19 22:40:20 2019 ] Training epoch: 35
+[ Tue Nov 19 22:52:36 2019 ] 	Mean training loss: 0.0487.
+[ Tue Nov 19 22:52:36 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 22:52:36 2019 ] Eval epoch: 35
+[ Tue Nov 19 22:54:12 2019 ] 	Mean test loss of 592 batches: 0.21846363371288455.
+[ Tue Nov 19 22:54:12 2019 ] 	Top1: 93.83%
+[ Tue Nov 19 22:54:13 2019 ] 	Top5: 99.12%
+[ Tue Nov 19 22:54:13 2019 ] Training epoch: 36
+[ Tue Nov 19 23:06:27 2019 ] 	Mean training loss: 0.0406.
+[ Tue Nov 19 23:06:27 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 23:06:27 2019 ] Eval epoch: 36
+[ Tue Nov 19 23:08:04 2019 ] 	Mean test loss of 592 batches: 0.221282597115213.
+[ Tue Nov 19 23:08:04 2019 ] 	Top1: 93.86%
+[ Tue Nov 19 23:08:04 2019 ] 	Top5: 99.12%
+[ Tue Nov 19 23:08:04 2019 ] Training epoch: 37
+[ Tue Nov 19 23:20:19 2019 ] 	Mean training loss: 0.0338.
+[ Tue Nov 19 23:20:19 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 23:20:19 2019 ] Eval epoch: 37
+[ Tue Nov 19 23:21:56 2019 ] 	Mean test loss of 592 batches: 0.22120501999617428.
+[ Tue Nov 19 23:21:56 2019 ] 	Top1: 94.06%
+[ Tue Nov 19 23:21:56 2019 ] 	Top5: 99.10%
+[ Tue Nov 19 23:21:56 2019 ] Training epoch: 38
+[ Tue Nov 19 23:34:11 2019 ] 	Mean training loss: 0.0277.
+[ Tue Nov 19 23:34:11 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 23:34:11 2019 ] Eval epoch: 38
+[ Tue Nov 19 23:35:48 2019 ] 	Mean test loss of 592 batches: 0.22674031677731388.
+[ Tue Nov 19 23:35:48 2019 ] 	Top1: 93.92%
+[ Tue Nov 19 23:35:48 2019 ] 	Top5: 99.12%
+[ Tue Nov 19 23:35:48 2019 ] Training epoch: 39
+[ Tue Nov 19 23:48:03 2019 ] 	Mean training loss: 0.0251.
+[ Tue Nov 19 23:48:03 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Tue Nov 19 23:48:03 2019 ] Eval epoch: 39
+[ Tue Nov 19 23:49:40 2019 ] 	Mean test loss of 592 batches: 0.23496788105851896.
+[ Tue Nov 19 23:49:40 2019 ] 	Top1: 93.86%
+[ Tue Nov 19 23:49:40 2019 ] 	Top5: 99.07%
+[ Tue Nov 19 23:49:40 2019 ] Training epoch: 40
+[ Wed Nov 20 00:01:56 2019 ] 	Mean training loss: 0.0217.
+[ Wed Nov 20 00:01:56 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Nov 20 00:01:56 2019 ] Eval epoch: 40
+[ Wed Nov 20 00:03:33 2019 ] 	Mean test loss of 592 batches: 0.23189941136720213.
+[ Wed Nov 20 00:03:33 2019 ] 	Top1: 93.85%
+[ Wed Nov 20 00:03:33 2019 ] 	Top5: 99.08%
+[ Wed Nov 20 00:03:33 2019 ] Training epoch: 41
+[ Wed Nov 20 00:15:50 2019 ] 	Mean training loss: 0.0174.
+[ Wed Nov 20 00:15:50 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Nov 20 00:15:50 2019 ] Eval epoch: 41
+[ Wed Nov 20 00:17:27 2019 ] 	Mean test loss of 592 batches: 0.23417884638734363.
+[ Wed Nov 20 00:17:27 2019 ] 	Top1: 93.82%
+[ Wed Nov 20 00:17:27 2019 ] 	Top5: 99.00%
+[ Wed Nov 20 00:17:27 2019 ] Training epoch: 42
+[ Wed Nov 20 00:29:43 2019 ] 	Mean training loss: 0.0166.
+[ Wed Nov 20 00:29:43 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Nov 20 00:29:43 2019 ] Eval epoch: 42
+[ Wed Nov 20 00:31:20 2019 ] 	Mean test loss of 592 batches: 0.2276934778972252.
+[ Wed Nov 20 00:31:20 2019 ] 	Top1: 93.95%
+[ Wed Nov 20 00:31:20 2019 ] 	Top5: 99.06%
+[ Wed Nov 20 00:31:20 2019 ] Training epoch: 43
+[ Wed Nov 20 00:43:36 2019 ] 	Mean training loss: 0.0158.
+[ Wed Nov 20 00:43:36 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Nov 20 00:43:36 2019 ] Eval epoch: 43
+[ Wed Nov 20 00:45:12 2019 ] 	Mean test loss of 592 batches: 0.23145784097849517.
+[ Wed Nov 20 00:45:13 2019 ] 	Top1: 93.87%
+[ Wed Nov 20 00:45:13 2019 ] 	Top5: 99.06%
+[ Wed Nov 20 00:45:13 2019 ] Training epoch: 44
+[ Wed Nov 20 00:57:29 2019 ] 	Mean training loss: 0.0162.
+[ Wed Nov 20 00:57:29 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Nov 20 00:57:29 2019 ] Eval epoch: 44
+[ Wed Nov 20 00:59:05 2019 ] 	Mean test loss of 592 batches: 0.23400269677812183.
+[ Wed Nov 20 00:59:05 2019 ] 	Top1: 93.82%
+[ Wed Nov 20 00:59:06 2019 ] 	Top5: 99.02%
+[ Wed Nov 20 00:59:06 2019 ] Training epoch: 45
+[ Wed Nov 20 01:11:21 2019 ] 	Mean training loss: 0.0147.
+[ Wed Nov 20 01:11:21 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Nov 20 01:11:21 2019 ] Eval epoch: 45
+[ Wed Nov 20 01:12:58 2019 ] 	Mean test loss of 592 batches: 0.23128767392119845.
+[ Wed Nov 20 01:12:58 2019 ] 	Top1: 93.90%
+[ Wed Nov 20 01:12:58 2019 ] 	Top5: 99.07%
+[ Wed Nov 20 01:12:58 2019 ] Training epoch: 46
+[ Wed Nov 20 01:25:13 2019 ] 	Mean training loss: 0.0148.
+[ Wed Nov 20 01:25:13 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Nov 20 01:25:13 2019 ] Eval epoch: 46
+[ Wed Nov 20 01:26:50 2019 ] 	Mean test loss of 592 batches: 0.2323142738031173.
+[ Wed Nov 20 01:26:50 2019 ] 	Top1: 93.92%
+[ Wed Nov 20 01:26:50 2019 ] 	Top5: 99.04%
+[ Wed Nov 20 01:26:50 2019 ] Training epoch: 47
+[ Wed Nov 20 01:39:05 2019 ] 	Mean training loss: 0.0150.
+[ Wed Nov 20 01:39:05 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Nov 20 01:39:05 2019 ] Eval epoch: 47
+[ Wed Nov 20 01:40:42 2019 ] 	Mean test loss of 592 batches: 0.2323527841300175.
+[ Wed Nov 20 01:40:42 2019 ] 	Top1: 93.94%
+[ Wed Nov 20 01:40:43 2019 ] 	Top5: 99.07%
+[ Wed Nov 20 01:40:43 2019 ] Training epoch: 48
+[ Wed Nov 20 01:52:59 2019 ] 	Mean training loss: 0.0139.
+[ Wed Nov 20 01:52:59 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Nov 20 01:52:59 2019 ] Eval epoch: 48
+[ Wed Nov 20 01:54:35 2019 ] 	Mean test loss of 592 batches: 0.23269305870289336.
+[ Wed Nov 20 01:54:36 2019 ] 	Top1: 94.04%
+[ Wed Nov 20 01:54:36 2019 ] 	Top5: 99.09%
+[ Wed Nov 20 01:54:36 2019 ] Training epoch: 49
+[ Wed Nov 20 02:06:51 2019 ] 	Mean training loss: 0.0145.
+[ Wed Nov 20 02:06:51 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Nov 20 02:06:51 2019 ] Eval epoch: 49
+[ Wed Nov 20 02:08:28 2019 ] 	Mean test loss of 592 batches: 0.23470116212863373.
+[ Wed Nov 20 02:08:28 2019 ] 	Top1: 93.90%
+[ Wed Nov 20 02:08:28 2019 ] 	Top5: 99.09%
+[ Wed Nov 20 02:08:28 2019 ] Training epoch: 50
+[ Wed Nov 20 02:20:45 2019 ] 	Mean training loss: 0.0142.
+[ Wed Nov 20 02:20:45 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Nov 20 02:20:45 2019 ] Eval epoch: 50
+[ Wed Nov 20 02:22:22 2019 ] 	Mean test loss of 592 batches: 0.23254687764455337.
+[ Wed Nov 20 02:22:22 2019 ] 	Top1: 93.92%
+[ Wed Nov 20 02:22:22 2019 ] 	Top5: 99.10%
+[ Wed Dec  4 10:10:40 2019 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 32, 'train_feeder_args': {'data_path': './data/ntu/xview/train_data_joint.npy', 'label_path': './data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': './data/ntu/xview/val_data_joint.npy', 'label_path': './data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [1, 2, 3, 4], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 64, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Dec  4 10:10:41 2019 ] Training epoch: 1
+[ Wed Dec  4 10:16:38 2019 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 32, 'train_feeder_args': {'data_path': './data/ntu/xview/train_data_joint.npy', 'label_path': './data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': './data/ntu/xview/val_data_joint.npy', 'label_path': './data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [1, 2, 3, 4], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 64, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Dec  4 10:16:38 2019 ] Training epoch: 1
+[ Wed Dec  4 10:17:24 2019 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 32, 'train_feeder_args': {'data_path': './data/ntu/xview/train_data_joint.npy', 'label_path': './data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': './data/ntu/xview/val_data_joint.npy', 'label_path': './data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [1, 2, 3, 4], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Dec  4 10:17:24 2019 ] Training epoch: 1
+[ Wed Dec  4 10:34:53 2019 ] 	Mean training loss: 3.3447.
+[ Wed Dec  4 10:34:53 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 10:34:53 2019 ] Eval epoch: 1
+[ Wed Dec  4 10:36:59 2019 ] 	Mean test loss of 296 batches: 2.3876816485379195.
+[ Wed Dec  4 10:36:59 2019 ] 	Top1: 28.19%
+[ Wed Dec  4 10:36:59 2019 ] 	Top5: 71.68%
+[ Wed Dec  4 10:36:59 2019 ] Training epoch: 2
+[ Wed Dec  4 10:54:21 2019 ] 	Mean training loss: 2.1942.
+[ Wed Dec  4 10:54:21 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 10:54:21 2019 ] Eval epoch: 2
+[ Wed Dec  4 10:56:27 2019 ] 	Mean test loss of 296 batches: 1.3784819078203794.
+[ Wed Dec  4 10:56:27 2019 ] 	Top1: 58.48%
+[ Wed Dec  4 10:56:27 2019 ] 	Top5: 91.00%
+[ Wed Dec  4 10:56:27 2019 ] Training epoch: 3
+[ Wed Dec  4 11:13:50 2019 ] 	Mean training loss: 1.5352.
+[ Wed Dec  4 11:13:50 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 11:13:50 2019 ] Eval epoch: 3
+[ Wed Dec  4 11:15:56 2019 ] 	Mean test loss of 296 batches: 0.9495530076123573.
+[ Wed Dec  4 11:15:56 2019 ] 	Top1: 69.63%
+[ Wed Dec  4 11:15:56 2019 ] 	Top5: 95.15%
+[ Wed Dec  4 11:15:56 2019 ] Training epoch: 4
+[ Wed Dec  4 11:33:19 2019 ] 	Mean training loss: 1.2162.
+[ Wed Dec  4 11:33:19 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 11:33:19 2019 ] Eval epoch: 4
+[ Wed Dec  4 11:35:25 2019 ] 	Mean test loss of 296 batches: 0.8562874347978348.
+[ Wed Dec  4 11:35:25 2019 ] 	Top1: 71.80%
+[ Wed Dec  4 11:35:25 2019 ] 	Top5: 96.28%
+[ Wed Dec  4 11:35:25 2019 ] Training epoch: 5
+[ Wed Dec  4 11:52:48 2019 ] 	Mean training loss: 1.0421.
+[ Wed Dec  4 11:52:48 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 11:52:48 2019 ] Eval epoch: 5
+[ Wed Dec  4 11:54:54 2019 ] 	Mean test loss of 296 batches: 0.6517381810054586.
+[ Wed Dec  4 11:54:54 2019 ] 	Top1: 78.77%
+[ Wed Dec  4 11:54:54 2019 ] 	Top5: 97.21%
+[ Wed Dec  4 11:54:54 2019 ] Training epoch: 6
+[ Wed Dec  4 12:12:17 2019 ] 	Mean training loss: 0.9147.
+[ Wed Dec  4 12:12:17 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 12:12:17 2019 ] Eval epoch: 6
+[ Wed Dec  4 12:14:23 2019 ] 	Mean test loss of 296 batches: 0.6215335070281416.
+[ Wed Dec  4 12:14:23 2019 ] 	Top1: 80.12%
+[ Wed Dec  4 12:14:24 2019 ] 	Top5: 97.56%
+[ Wed Dec  4 12:14:24 2019 ] Training epoch: 7
+[ Wed Dec  4 12:31:46 2019 ] 	Mean training loss: 0.8415.
+[ Wed Dec  4 12:31:46 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 12:31:46 2019 ] Eval epoch: 7
+[ Wed Dec  4 12:33:53 2019 ] 	Mean test loss of 296 batches: 0.5271561674370959.
+[ Wed Dec  4 12:33:53 2019 ] 	Top1: 82.61%
+[ Wed Dec  4 12:33:53 2019 ] 	Top5: 97.81%
+[ Wed Dec  4 12:33:53 2019 ] Training epoch: 8
+[ Wed Dec  4 12:51:15 2019 ] 	Mean training loss: 0.7683.
+[ Wed Dec  4 12:51:15 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 12:51:15 2019 ] Eval epoch: 8
+[ Wed Dec  4 12:53:21 2019 ] 	Mean test loss of 296 batches: 0.5284861761170465.
+[ Wed Dec  4 12:53:21 2019 ] 	Top1: 82.35%
+[ Wed Dec  4 12:53:21 2019 ] 	Top5: 97.97%
+[ Wed Dec  4 12:53:21 2019 ] Training epoch: 9
+[ Wed Dec  4 13:10:44 2019 ] 	Mean training loss: 0.7209.
+[ Wed Dec  4 13:10:44 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 13:10:44 2019 ] Eval epoch: 9
+[ Wed Dec  4 13:12:51 2019 ] 	Mean test loss of 296 batches: 0.5000105188605753.
+[ Wed Dec  4 13:12:51 2019 ] 	Top1: 84.46%
+[ Wed Dec  4 13:12:51 2019 ] 	Top5: 98.02%
+[ Wed Dec  4 13:12:51 2019 ] Training epoch: 10
+[ Wed Dec  4 13:30:13 2019 ] 	Mean training loss: 0.6763.
+[ Wed Dec  4 13:30:13 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 13:30:13 2019 ] Eval epoch: 10
+[ Wed Dec  4 13:32:20 2019 ] 	Mean test loss of 296 batches: 0.4774848118525099.
+[ Wed Dec  4 13:32:20 2019 ] 	Top1: 83.95%
+[ Wed Dec  4 13:32:20 2019 ] 	Top5: 98.30%
+[ Wed Dec  4 13:32:20 2019 ] Training epoch: 11
+[ Wed Dec  4 13:49:42 2019 ] 	Mean training loss: 0.6406.
+[ Wed Dec  4 13:49:42 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 13:49:42 2019 ] Eval epoch: 11
+[ Wed Dec  4 13:51:49 2019 ] 	Mean test loss of 296 batches: 0.4375173631250053.
+[ Wed Dec  4 13:51:49 2019 ] 	Top1: 85.80%
+[ Wed Dec  4 13:51:49 2019 ] 	Top5: 98.43%
+[ Wed Dec  4 13:51:49 2019 ] Training epoch: 12
+[ Wed Dec  4 14:09:12 2019 ] 	Mean training loss: 0.6017.
+[ Wed Dec  4 14:09:12 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 14:09:12 2019 ] Eval epoch: 12
+[ Wed Dec  4 14:11:18 2019 ] 	Mean test loss of 296 batches: 0.4085427704393058.
+[ Wed Dec  4 14:11:18 2019 ] 	Top1: 86.74%
+[ Wed Dec  4 14:11:18 2019 ] 	Top5: 98.40%
+[ Wed Dec  4 14:11:18 2019 ] Training epoch: 13
+[ Wed Dec  4 14:28:40 2019 ] 	Mean training loss: 0.5780.
+[ Wed Dec  4 14:28:40 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 14:28:40 2019 ] Eval epoch: 13
+[ Wed Dec  4 14:30:47 2019 ] 	Mean test loss of 296 batches: 0.4203641819893508.
+[ Wed Dec  4 14:30:47 2019 ] 	Top1: 87.05%
+[ Wed Dec  4 14:30:47 2019 ] 	Top5: 98.25%
+[ Wed Dec  4 14:30:47 2019 ] Training epoch: 14
+[ Wed Dec  4 14:48:09 2019 ] 	Mean training loss: 0.5487.
+[ Wed Dec  4 14:48:09 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 14:48:09 2019 ] Eval epoch: 14
+[ Wed Dec  4 14:50:16 2019 ] 	Mean test loss of 296 batches: 0.4424724487738835.
+[ Wed Dec  4 14:50:16 2019 ] 	Top1: 85.82%
+[ Wed Dec  4 14:50:16 2019 ] 	Top5: 98.45%
+[ Wed Dec  4 14:50:16 2019 ] Training epoch: 15
+[ Wed Dec  4 15:07:39 2019 ] 	Mean training loss: 0.5228.
+[ Wed Dec  4 15:07:39 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 15:07:39 2019 ] Eval epoch: 15
+[ Wed Dec  4 15:09:45 2019 ] 	Mean test loss of 296 batches: 0.41129908866777615.
+[ Wed Dec  4 15:09:45 2019 ] 	Top1: 86.54%
+[ Wed Dec  4 15:09:45 2019 ] 	Top5: 98.34%
+[ Wed Dec  4 15:09:45 2019 ] Training epoch: 16
+[ Wed Dec  4 15:27:08 2019 ] 	Mean training loss: 0.4993.
+[ Wed Dec  4 15:27:08 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 15:27:08 2019 ] Eval epoch: 16
+[ Wed Dec  4 15:29:14 2019 ] 	Mean test loss of 296 batches: 0.372367112570115.
+[ Wed Dec  4 15:29:14 2019 ] 	Top1: 88.21%
+[ Wed Dec  4 15:29:14 2019 ] 	Top5: 98.58%
+[ Wed Dec  4 15:29:14 2019 ] Training epoch: 17
+[ Wed Dec  4 15:46:38 2019 ] 	Mean training loss: 0.4808.
+[ Wed Dec  4 15:46:38 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 15:46:38 2019 ] Eval epoch: 17
+[ Wed Dec  4 15:48:45 2019 ] 	Mean test loss of 296 batches: 0.40784280661594224.
+[ Wed Dec  4 15:48:45 2019 ] 	Top1: 87.05%
+[ Wed Dec  4 15:48:45 2019 ] 	Top5: 98.63%
+[ Wed Dec  4 15:48:45 2019 ] Training epoch: 18
+[ Wed Dec  4 16:06:09 2019 ] 	Mean training loss: 0.4575.
+[ Wed Dec  4 16:06:09 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 16:06:10 2019 ] Eval epoch: 18
+[ Wed Dec  4 16:08:16 2019 ] 	Mean test loss of 296 batches: 0.41262996876360597.
+[ Wed Dec  4 16:08:16 2019 ] 	Top1: 87.19%
+[ Wed Dec  4 16:08:17 2019 ] 	Top5: 98.49%
+[ Wed Dec  4 16:08:17 2019 ] Training epoch: 19
+[ Wed Dec  4 16:25:41 2019 ] 	Mean training loss: 0.4434.
+[ Wed Dec  4 16:25:41 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 16:25:41 2019 ] Eval epoch: 19
+[ Wed Dec  4 16:27:48 2019 ] 	Mean test loss of 296 batches: 0.4756632001214736.
+[ Wed Dec  4 16:27:49 2019 ] 	Top1: 85.51%
+[ Wed Dec  4 16:27:49 2019 ] 	Top5: 98.34%
+[ Wed Dec  4 16:27:49 2019 ] Training epoch: 20
+[ Wed Dec  4 16:45:12 2019 ] 	Mean training loss: 0.4256.
+[ Wed Dec  4 16:45:12 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 16:45:12 2019 ] Eval epoch: 20
+[ Wed Dec  4 16:47:18 2019 ] 	Mean test loss of 296 batches: 0.37365539900555805.
+[ Wed Dec  4 16:47:19 2019 ] 	Top1: 88.57%
+[ Wed Dec  4 16:47:19 2019 ] 	Top5: 98.71%
+[ Wed Dec  4 16:47:19 2019 ] Training epoch: 21
+[ Wed Dec  4 17:04:42 2019 ] 	Mean training loss: 0.4092.
+[ Wed Dec  4 17:04:42 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 17:04:42 2019 ] Eval epoch: 21
+[ Wed Dec  4 17:06:48 2019 ] 	Mean test loss of 296 batches: 0.35803657264222166.
+[ Wed Dec  4 17:06:48 2019 ] 	Top1: 88.72%
+[ Wed Dec  4 17:06:48 2019 ] 	Top5: 98.62%
+[ Wed Dec  4 17:06:48 2019 ] Training epoch: 22
+[ Wed Dec  4 17:24:11 2019 ] 	Mean training loss: 0.3861.
+[ Wed Dec  4 17:24:11 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 17:24:12 2019 ] Eval epoch: 22
+[ Wed Dec  4 17:26:18 2019 ] 	Mean test loss of 296 batches: 0.3279420808712776.
+[ Wed Dec  4 17:26:18 2019 ] 	Top1: 89.54%
+[ Wed Dec  4 17:26:18 2019 ] 	Top5: 98.84%
+[ Wed Dec  4 17:26:18 2019 ] Training epoch: 23
+[ Wed Dec  4 17:43:40 2019 ] 	Mean training loss: 0.3810.
+[ Wed Dec  4 17:43:40 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 17:43:40 2019 ] Eval epoch: 23
+[ Wed Dec  4 17:45:47 2019 ] 	Mean test loss of 296 batches: 0.3656148599662088.
+[ Wed Dec  4 17:45:47 2019 ] 	Top1: 88.93%
+[ Wed Dec  4 17:45:47 2019 ] 	Top5: 98.61%
+[ Wed Dec  4 17:45:47 2019 ] Training epoch: 24
+[ Wed Dec  4 18:03:09 2019 ] 	Mean training loss: 0.3613.
+[ Wed Dec  4 18:03:09 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 18:03:09 2019 ] Eval epoch: 24
+[ Wed Dec  4 18:05:16 2019 ] 	Mean test loss of 296 batches: 0.3747562709692362.
+[ Wed Dec  4 18:05:16 2019 ] 	Top1: 88.38%
+[ Wed Dec  4 18:05:16 2019 ] 	Top5: 98.56%
+[ Wed Dec  4 18:05:16 2019 ] Training epoch: 25
+[ Wed Dec  4 18:22:37 2019 ] 	Mean training loss: 0.3541.
+[ Wed Dec  4 18:22:37 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 18:22:37 2019 ] Eval epoch: 25
+[ Wed Dec  4 18:24:44 2019 ] 	Mean test loss of 296 batches: 0.3766898145345417.
+[ Wed Dec  4 18:24:44 2019 ] 	Top1: 88.74%
+[ Wed Dec  4 18:24:44 2019 ] 	Top5: 98.64%
+[ Wed Dec  4 18:24:44 2019 ] Training epoch: 26
+[ Wed Dec  4 18:42:06 2019 ] 	Mean training loss: 0.3498.
+[ Wed Dec  4 18:42:06 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 18:42:06 2019 ] Eval epoch: 26
+[ Wed Dec  4 18:44:12 2019 ] 	Mean test loss of 296 batches: 0.40037529580798503.
+[ Wed Dec  4 18:44:12 2019 ] 	Top1: 88.10%
+[ Wed Dec  4 18:44:12 2019 ] 	Top5: 98.51%
+[ Wed Dec  4 18:44:12 2019 ] Training epoch: 27
+[ Wed Dec  4 19:01:34 2019 ] 	Mean training loss: 0.3432.
+[ Wed Dec  4 19:01:34 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 19:01:34 2019 ] Eval epoch: 27
+[ Wed Dec  4 19:03:40 2019 ] 	Mean test loss of 296 batches: 0.35245855676161275.
+[ Wed Dec  4 19:03:40 2019 ] 	Top1: 89.26%
+[ Wed Dec  4 19:03:40 2019 ] 	Top5: 98.71%
+[ Wed Dec  4 19:03:40 2019 ] Training epoch: 28
+[ Wed Dec  4 19:21:02 2019 ] 	Mean training loss: 0.3197.
+[ Wed Dec  4 19:21:02 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 19:21:02 2019 ] Eval epoch: 28
+[ Wed Dec  4 19:23:09 2019 ] 	Mean test loss of 296 batches: 0.38736073277588634.
+[ Wed Dec  4 19:23:09 2019 ] 	Top1: 88.32%
+[ Wed Dec  4 19:23:09 2019 ] 	Top5: 98.37%
+[ Wed Dec  4 19:23:09 2019 ] Training epoch: 29
+[ Wed Dec  4 19:40:31 2019 ] 	Mean training loss: 0.3177.
+[ Wed Dec  4 19:40:31 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 19:40:31 2019 ] Eval epoch: 29
+[ Wed Dec  4 19:42:38 2019 ] 	Mean test loss of 296 batches: 0.37779340137903755.
+[ Wed Dec  4 19:42:38 2019 ] 	Top1: 88.53%
+[ Wed Dec  4 19:42:38 2019 ] 	Top5: 98.65%
+[ Wed Dec  4 19:42:38 2019 ] Training epoch: 30
+[ Wed Dec  4 20:00:00 2019 ] 	Mean training loss: 0.3097.
+[ Wed Dec  4 20:00:00 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 20:00:00 2019 ] Eval epoch: 30
+[ Wed Dec  4 20:02:06 2019 ] 	Mean test loss of 296 batches: 0.3756221187477176.
+[ Wed Dec  4 20:02:06 2019 ] 	Top1: 88.53%
+[ Wed Dec  4 20:02:06 2019 ] 	Top5: 98.59%
+[ Wed Dec  4 20:02:06 2019 ] Training epoch: 31
+[ Wed Dec  4 20:19:28 2019 ] 	Mean training loss: 0.1107.
+[ Wed Dec  4 20:19:28 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 20:19:28 2019 ] Eval epoch: 31
+[ Wed Dec  4 20:21:35 2019 ] 	Mean test loss of 296 batches: 0.23598797088237228.
+[ Wed Dec  4 20:21:35 2019 ] 	Top1: 93.05%
+[ Wed Dec  4 20:21:36 2019 ] 	Top5: 99.04%
+[ Wed Dec  4 20:21:36 2019 ] Training epoch: 32
+[ Wed Dec  4 20:38:59 2019 ] 	Mean training loss: 0.0609.
+[ Wed Dec  4 20:38:59 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 20:38:59 2019 ] Eval epoch: 32
+[ Wed Dec  4 20:41:05 2019 ] 	Mean test loss of 296 batches: 0.2238427468802075.
+[ Wed Dec  4 20:41:06 2019 ] 	Top1: 93.27%
+[ Wed Dec  4 20:41:06 2019 ] 	Top5: 99.07%
+[ Wed Dec  4 20:41:06 2019 ] Training epoch: 33
+[ Wed Dec  4 20:58:29 2019 ] 	Mean training loss: 0.0437.
+[ Wed Dec  4 20:58:29 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 20:58:29 2019 ] Eval epoch: 33
+[ Wed Dec  4 21:00:36 2019 ] 	Mean test loss of 296 batches: 0.22794909933833657.
+[ Wed Dec  4 21:00:36 2019 ] 	Top1: 93.41%
+[ Wed Dec  4 21:00:36 2019 ] 	Top5: 99.09%
+[ Wed Dec  4 21:00:36 2019 ] Training epoch: 34
+[ Wed Dec  4 21:17:58 2019 ] 	Mean training loss: 0.0357.
+[ Wed Dec  4 21:17:58 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 21:17:58 2019 ] Eval epoch: 34
+[ Wed Dec  4 21:20:05 2019 ] 	Mean test loss of 296 batches: 0.2313072583763986.
+[ Wed Dec  4 21:20:05 2019 ] 	Top1: 93.40%
+[ Wed Dec  4 21:20:05 2019 ] 	Top5: 99.07%
+[ Wed Dec  4 21:20:05 2019 ] Training epoch: 35
+[ Wed Dec  4 21:37:29 2019 ] 	Mean training loss: 0.0290.
+[ Wed Dec  4 21:37:29 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 21:37:29 2019 ] Eval epoch: 35
+[ Wed Dec  4 21:39:36 2019 ] 	Mean test loss of 296 batches: 0.2294082136673702.
+[ Wed Dec  4 21:39:36 2019 ] 	Top1: 93.59%
+[ Wed Dec  4 21:39:36 2019 ] 	Top5: 99.08%
+[ Wed Dec  4 21:39:36 2019 ] Training epoch: 36
+[ Wed Dec  4 21:57:00 2019 ] 	Mean training loss: 0.0255.
+[ Wed Dec  4 21:57:00 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 21:57:01 2019 ] Eval epoch: 36
+[ Wed Dec  4 21:59:08 2019 ] 	Mean test loss of 296 batches: 0.23983945075825258.
+[ Wed Dec  4 21:59:08 2019 ] 	Top1: 93.42%
+[ Wed Dec  4 21:59:08 2019 ] 	Top5: 99.02%
+[ Wed Dec  4 21:59:08 2019 ] Training epoch: 37
+[ Wed Dec  4 22:16:32 2019 ] 	Mean training loss: 0.0207.
+[ Wed Dec  4 22:16:32 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 22:16:32 2019 ] Eval epoch: 37
+[ Wed Dec  4 22:18:39 2019 ] 	Mean test loss of 296 batches: 0.23883577015855023.
+[ Wed Dec  4 22:18:39 2019 ] 	Top1: 93.35%
+[ Wed Dec  4 22:18:39 2019 ] 	Top5: 99.09%
+[ Wed Dec  4 22:18:39 2019 ] Training epoch: 38
+[ Wed Dec  4 22:36:05 2019 ] 	Mean training loss: 0.0190.
+[ Wed Dec  4 22:36:05 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 22:36:05 2019 ] Eval epoch: 38
+[ Wed Dec  4 22:38:12 2019 ] 	Mean test loss of 296 batches: 0.23720357219713764.
+[ Wed Dec  4 22:38:12 2019 ] 	Top1: 93.56%
+[ Wed Dec  4 22:38:12 2019 ] 	Top5: 99.05%
+[ Wed Dec  4 22:38:12 2019 ] Training epoch: 39
+[ Wed Dec  4 22:55:37 2019 ] 	Mean training loss: 0.0170.
+[ Wed Dec  4 22:55:37 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 22:55:37 2019 ] Eval epoch: 39
+[ Wed Dec  4 22:57:45 2019 ] 	Mean test loss of 296 batches: 0.23618925272210226.
+[ Wed Dec  4 22:57:45 2019 ] 	Top1: 93.58%
+[ Wed Dec  4 22:57:45 2019 ] 	Top5: 99.04%
+[ Wed Dec  4 22:57:45 2019 ] Training epoch: 40
+[ Wed Dec  4 23:15:10 2019 ] 	Mean training loss: 0.0146.
+[ Wed Dec  4 23:15:10 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 23:15:10 2019 ] Eval epoch: 40
+[ Wed Dec  4 23:17:17 2019 ] 	Mean test loss of 296 batches: 0.2371238772631497.
+[ Wed Dec  4 23:17:17 2019 ] 	Top1: 93.40%
+[ Wed Dec  4 23:17:17 2019 ] 	Top5: 99.09%
+[ Wed Dec  4 23:17:17 2019 ] Training epoch: 41
+[ Wed Dec  4 23:34:42 2019 ] 	Mean training loss: 0.0136.
+[ Wed Dec  4 23:34:42 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 23:34:42 2019 ] Eval epoch: 41
+[ Wed Dec  4 23:36:49 2019 ] 	Mean test loss of 296 batches: 0.23958698539315043.
+[ Wed Dec  4 23:36:49 2019 ] 	Top1: 93.70%
+[ Wed Dec  4 23:36:49 2019 ] 	Top5: 99.08%
+[ Wed Dec  4 23:36:49 2019 ] Training epoch: 42
+[ Wed Dec  4 23:54:14 2019 ] 	Mean training loss: 0.0128.
+[ Wed Dec  4 23:54:14 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Wed Dec  4 23:54:14 2019 ] Eval epoch: 42
+[ Wed Dec  4 23:56:21 2019 ] 	Mean test loss of 296 batches: 0.23566621433742144.
+[ Wed Dec  4 23:56:21 2019 ] 	Top1: 93.67%
+[ Wed Dec  4 23:56:21 2019 ] 	Top5: 99.09%
+[ Wed Dec  4 23:56:21 2019 ] Training epoch: 43
+[ Thu Dec  5 00:13:41 2019 ] 	Mean training loss: 0.0131.
+[ Thu Dec  5 00:13:41 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Thu Dec  5 00:13:41 2019 ] Eval epoch: 43
+[ Thu Dec  5 00:15:48 2019 ] 	Mean test loss of 296 batches: 0.23538644362643762.
+[ Thu Dec  5 00:15:48 2019 ] 	Top1: 93.57%
+[ Thu Dec  5 00:15:48 2019 ] 	Top5: 99.08%
+[ Thu Dec  5 00:15:48 2019 ] Training epoch: 44
+[ Thu Dec  5 00:33:09 2019 ] 	Mean training loss: 0.0123.
+[ Thu Dec  5 00:33:09 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Thu Dec  5 00:33:09 2019 ] Eval epoch: 44
+[ Thu Dec  5 00:35:15 2019 ] 	Mean test loss of 296 batches: 0.23901778507373622.
+[ Thu Dec  5 00:35:15 2019 ] 	Top1: 93.59%
+[ Thu Dec  5 00:35:15 2019 ] 	Top5: 99.08%
+[ Thu Dec  5 00:35:15 2019 ] Training epoch: 45
+[ Thu Dec  5 00:52:36 2019 ] 	Mean training loss: 0.0123.
+[ Thu Dec  5 00:52:36 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Thu Dec  5 00:52:36 2019 ] Eval epoch: 45
+[ Thu Dec  5 00:54:43 2019 ] 	Mean test loss of 296 batches: 0.2379287672103257.
+[ Thu Dec  5 00:54:43 2019 ] 	Top1: 93.68%
+[ Thu Dec  5 00:54:43 2019 ] 	Top5: 99.07%
+[ Thu Dec  5 00:54:43 2019 ] Training epoch: 46
+[ Thu Dec  5 01:12:03 2019 ] 	Mean training loss: 0.0117.
+[ Thu Dec  5 01:12:03 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Thu Dec  5 01:12:03 2019 ] Eval epoch: 46
+[ Thu Dec  5 01:14:10 2019 ] 	Mean test loss of 296 batches: 0.2368838263776254.
+[ Thu Dec  5 01:14:10 2019 ] 	Top1: 93.67%
+[ Thu Dec  5 01:14:10 2019 ] 	Top5: 99.11%
+[ Thu Dec  5 01:14:10 2019 ] Training epoch: 47
+[ Thu Dec  5 01:31:31 2019 ] 	Mean training loss: 0.0122.
+[ Thu Dec  5 01:31:31 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Thu Dec  5 01:31:31 2019 ] Eval epoch: 47
+[ Thu Dec  5 01:33:38 2019 ] 	Mean test loss of 296 batches: 0.23755912943365606.
+[ Thu Dec  5 01:33:38 2019 ] 	Top1: 93.61%
+[ Thu Dec  5 01:33:39 2019 ] 	Top5: 99.11%
+[ Thu Dec  5 01:33:39 2019 ] Training epoch: 48
+[ Thu Dec  5 01:50:59 2019 ] 	Mean training loss: 0.0116.
+[ Thu Dec  5 01:50:59 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Thu Dec  5 01:50:59 2019 ] Eval epoch: 48
+[ Thu Dec  5 01:53:05 2019 ] 	Mean test loss of 296 batches: 0.23688214357841658.
+[ Thu Dec  5 01:53:06 2019 ] 	Top1: 93.57%
+[ Thu Dec  5 01:53:06 2019 ] 	Top5: 99.07%
+[ Thu Dec  5 01:53:06 2019 ] Training epoch: 49
+[ Thu Dec  5 02:10:26 2019 ] 	Mean training loss: 0.0116.
+[ Thu Dec  5 02:10:26 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Thu Dec  5 02:10:26 2019 ] Eval epoch: 49
+[ Thu Dec  5 02:12:33 2019 ] 	Mean test loss of 296 batches: 0.2353258717654122.
+[ Thu Dec  5 02:12:33 2019 ] 	Top1: 93.69%
+[ Thu Dec  5 02:12:33 2019 ] 	Top5: 99.06%
+[ Thu Dec  5 02:12:33 2019 ] Training epoch: 50
+[ Thu Dec  5 02:29:53 2019 ] 	Mean training loss: 0.0118.
+[ Thu Dec  5 02:29:53 2019 ] 	Time consumption: [Data]01%, [Network]99%
+[ Thu Dec  5 02:29:53 2019 ] Eval epoch: 50
+[ Thu Dec  5 02:32:00 2019 ] 	Mean test loss of 296 batches: 0.23333146463374835.
+[ Thu Dec  5 02:32:00 2019 ] 	Top1: 93.69%
+[ Thu Dec  5 02:32:00 2019 ] 	Top5: 99.08%
+[ Fri Apr  3 16:34:18 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 32, 'train_feeder_args': {'data_path': './data/ntu/xview/train_data_joint.npy', 'label_path': './data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': './data/ntu/xview/val_data_joint.npy', 'label_path': './data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [1, 3], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Fri Apr  3 16:34:18 2020 ] Training epoch: 1
+[ Tue Sep 15 20:25:47 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Tue Sep 15 20:25:47 2020 ] Training epoch: 1
+[ Tue Sep 15 20:28:50 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Tue Sep 15 20:28:50 2020 ] Training epoch: 1
+[ Tue Sep 15 20:34:27 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Tue Sep 15 20:34:27 2020 ] Training epoch: 1
+[ Tue Sep 15 20:35:29 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Tue Sep 15 20:35:29 2020 ] Training epoch: 1
+[ Tue Sep 15 20:36:52 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Tue Sep 15 20:36:52 2020 ] Training epoch: 1
+[ Tue Sep 15 20:38:15 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Tue Sep 15 20:38:15 2020 ] Training epoch: 1
+[ Tue Sep 15 20:39:48 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Tue Sep 15 20:39:48 2020 ] Training epoch: 1
+[ Tue Sep 15 20:47:45 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Tue Sep 15 20:47:45 2020 ] Training epoch: 1
+[ Tue Sep 15 20:48:43 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Tue Sep 15 20:48:43 2020 ] Training epoch: 1
+[ Tue Sep 15 20:49:57 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 2, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Tue Sep 15 20:49:57 2020 ] Training epoch: 1
+[ Tue Sep 15 20:53:25 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Tue Sep 15 20:53:25 2020 ] Training epoch: 1
+[ Tue Sep 15 21:00:05 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Tue Sep 15 21:00:05 2020 ] Training epoch: 1
+[ Tue Sep 15 21:19:43 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Tue Sep 15 21:19:43 2020 ] Training epoch: 1
+[ Wed Sep 16 09:45:29 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 09:45:29 2020 ] Training epoch: 1
+[ Wed Sep 16 09:46:52 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 09:46:52 2020 ] Training epoch: 1
+[ Wed Sep 16 09:49:01 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 09:49:01 2020 ] Training epoch: 1
+[ Wed Sep 16 09:50:16 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 09:50:16 2020 ] Training epoch: 1
+[ Wed Sep 16 09:52:00 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 09:52:00 2020 ] Training epoch: 1
+[ Wed Sep 16 09:54:20 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 09:54:20 2020 ] Training epoch: 1
+[ Wed Sep 16 09:56:41 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 09:56:41 2020 ] Training epoch: 1
+[ Wed Sep 16 09:58:58 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 09:58:58 2020 ] Training epoch: 1
+[ Wed Sep 16 10:05:52 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 10:05:52 2020 ] Training epoch: 1
+[ Wed Sep 16 10:06:56 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 10:06:56 2020 ] Training epoch: 1
+[ Wed Sep 16 10:08:09 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 10:08:09 2020 ] Training epoch: 1
+[ Wed Sep 16 10:11:38 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 10:11:38 2020 ] Training epoch: 1
+[ Wed Sep 16 10:18:20 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 10:18:20 2020 ] Training epoch: 1
+[ Wed Sep 16 10:19:13 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 10:19:13 2020 ] Training epoch: 1
+[ Wed Sep 16 10:20:08 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 10:20:08 2020 ] Training epoch: 1
+[ Wed Sep 16 10:20:48 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 10:20:48 2020 ] Training epoch: 1
+[ Wed Sep 16 10:21:41 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 10:21:41 2020 ] Training epoch: 1
+[ Wed Sep 16 14:21:33 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 14:21:33 2020 ] Training epoch: 1
+[ Wed Sep 16 14:22:42 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 14:22:42 2020 ] Training epoch: 1
+[ Wed Sep 16 14:28:42 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 14:28:42 2020 ] Training epoch: 1
+[ Wed Sep 16 14:36:09 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 14:36:09 2020 ] Training epoch: 1
+[ Wed Sep 16 14:37:01 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 8, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 14:37:01 2020 ] Training epoch: 1
+[ Wed Sep 16 14:38:34 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 8, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 14:38:34 2020 ] Training epoch: 1
+[ Wed Sep 16 14:52:13 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 8, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 14:52:13 2020 ] Training epoch: 1
+[ Wed Sep 16 14:53:14 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 8, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 14:53:14 2020 ] Training epoch: 1
+[ Wed Sep 16 14:55:22 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 8, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 14:55:22 2020 ] Training epoch: 1
+[ Wed Sep 16 14:56:12 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 8, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 14:56:13 2020 ] Training epoch: 1
+[ Wed Sep 16 15:02:09 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 8, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 15:02:09 2020 ] Training epoch: 1
+[ Wed Sep 16 15:02:47 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 8, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 15:02:47 2020 ] Training epoch: 1
+[ Wed Sep 16 15:05:19 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 8, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 15:05:19 2020 ] Training epoch: 1
+[ Wed Sep 16 15:07:12 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 8, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 15:07:12 2020 ] Training epoch: 1
+[ Wed Sep 16 15:08:08 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 8, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 15:08:08 2020 ] Training epoch: 1
+[ Wed Sep 16 15:09:46 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 8, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 15:09:46 2020 ] Training epoch: 1
+[ Wed Sep 16 15:10:14 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 8, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 15:10:14 2020 ] Training epoch: 1
+[ Wed Sep 16 15:17:15 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 8, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 15:17:15 2020 ] Training epoch: 1
+[ Wed Sep 16 15:18:05 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 15:18:05 2020 ] Training epoch: 1
+[ Wed Sep 16 15:18:36 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 16, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 15:18:36 2020 ] Training epoch: 1
+[ Wed Sep 16 15:20:03 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 16, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 15:20:03 2020 ] Training epoch: 1
+[ Wed Sep 16 15:21:20 2020 ] Parameters:
+{'work_dir': './work_dir/ntu/xview/agcn_joint', 'model_saved_name': './runs/ntu_cv_agcn_joint', 'config': './config/nturgbd-cross-view/train_joint.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 2, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/train_label.pkl', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': -1, 'normalization': False}, 'test_feeder_args': {'data_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_data_joint.npy', 'label_path': '/workplace/wd/2s-AGCN_new/data/ntu/xview/val_label.pkl'}, 'model': 'model.agcn.Model', 'model_args': {'num_class': 60, 'num_point': 25, 'num_person': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [30, 40], 'device': [0, 1], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 20, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 50, 'weight_decay': 0.0001, 'only_train_part': False, 'only_train_epoch': 0, 'warm_up_epoch': 0}
+
+[ Wed Sep 16 15:21:20 2020 ] Training epoch: 1
+[ Wed Sep 16 17:01:40 2020 ] 	Mean training loss: 3.0829.
+[ Wed Sep 16 17:01:40 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Wed Sep 16 17:01:40 2020 ] Eval epoch: 1
+[ Wed Sep 16 17:15:10 2020 ] 	Mean test loss of 296 batches: 1.9452782116226248.
+[ Wed Sep 16 17:15:10 2020 ] 	Top1: 39.69%
+[ Wed Sep 16 17:15:10 2020 ] 	Top5: 82.67%
+[ Wed Sep 16 17:15:10 2020 ] Training epoch: 2
+[ Wed Sep 16 18:55:40 2020 ] 	Mean training loss: 1.9084.
+[ Wed Sep 16 18:55:40 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Wed Sep 16 18:55:40 2020 ] Eval epoch: 2
+[ Wed Sep 16 19:09:07 2020 ] 	Mean test loss of 296 batches: 1.2402186963606525.
+[ Wed Sep 16 19:09:07 2020 ] 	Top1: 61.17%
+[ Wed Sep 16 19:09:07 2020 ] 	Top5: 92.30%
+[ Wed Sep 16 19:09:07 2020 ] Training epoch: 3
+[ Wed Sep 16 20:49:29 2020 ] 	Mean training loss: 1.3484.
+[ Wed Sep 16 20:49:29 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Wed Sep 16 20:49:29 2020 ] Eval epoch: 3
+[ Wed Sep 16 21:02:57 2020 ] 	Mean test loss of 296 batches: 0.8458529438924145.
+[ Wed Sep 16 21:02:57 2020 ] 	Top1: 73.65%
+[ Wed Sep 16 21:02:57 2020 ] 	Top5: 96.10%
+[ Wed Sep 16 21:02:57 2020 ] Training epoch: 4
+[ Wed Sep 16 22:43:15 2020 ] 	Mean training loss: 1.0729.
+[ Wed Sep 16 22:43:15 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Wed Sep 16 22:43:15 2020 ] Eval epoch: 4
+[ Wed Sep 16 22:56:41 2020 ] 	Mean test loss of 296 batches: 0.7415156106691103.
+[ Wed Sep 16 22:56:41 2020 ] 	Top1: 75.83%
+[ Wed Sep 16 22:56:41 2020 ] 	Top5: 96.66%
+[ Wed Sep 16 22:56:41 2020 ] Training epoch: 5
+[ Thu Sep 17 00:37:06 2020 ] 	Mean training loss: 0.9344.
+[ Thu Sep 17 00:37:06 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Thu Sep 17 00:37:06 2020 ] Eval epoch: 5
+[ Thu Sep 17 00:50:33 2020 ] 	Mean test loss of 296 batches: 0.6384546651026687.
+[ Thu Sep 17 00:50:33 2020 ] 	Top1: 79.46%
+[ Thu Sep 17 00:50:33 2020 ] 	Top5: 97.29%
+[ Thu Sep 17 00:50:33 2020 ] Training epoch: 6
+[ Thu Sep 17 02:30:49 2020 ] 	Mean training loss: 0.8481.
+[ Thu Sep 17 02:30:49 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Thu Sep 17 02:30:49 2020 ] Eval epoch: 6
+[ Thu Sep 17 02:44:17 2020 ] 	Mean test loss of 296 batches: 0.5427648635530794.
+[ Thu Sep 17 02:44:17 2020 ] 	Top1: 82.65%
+[ Thu Sep 17 02:44:17 2020 ] 	Top5: 97.87%
+[ Thu Sep 17 02:44:17 2020 ] Training epoch: 7
+[ Thu Sep 17 04:24:44 2020 ] 	Mean training loss: 0.7854.
+[ Thu Sep 17 04:24:44 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Thu Sep 17 04:24:44 2020 ] Eval epoch: 7
+[ Thu Sep 17 04:38:11 2020 ] 	Mean test loss of 296 batches: 0.5465829153419346.
+[ Thu Sep 17 04:38:11 2020 ] 	Top1: 82.34%
+[ Thu Sep 17 04:38:11 2020 ] 	Top5: 97.93%
+[ Thu Sep 17 04:38:11 2020 ] Training epoch: 8
+[ Thu Sep 17 06:18:22 2020 ] 	Mean training loss: 0.7474.
+[ Thu Sep 17 06:18:22 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Thu Sep 17 06:18:22 2020 ] Eval epoch: 8
+[ Thu Sep 17 06:31:49 2020 ] 	Mean test loss of 296 batches: 0.5548711986457174.
+[ Thu Sep 17 06:31:49 2020 ] 	Top1: 82.45%
+[ Thu Sep 17 06:31:49 2020 ] 	Top5: 97.93%
+[ Thu Sep 17 06:31:49 2020 ] Training epoch: 9
+[ Thu Sep 17 08:12:00 2020 ] 	Mean training loss: 0.7029.
+[ Thu Sep 17 08:12:00 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Thu Sep 17 08:12:00 2020 ] Eval epoch: 9
+[ Thu Sep 17 08:25:28 2020 ] 	Mean test loss of 296 batches: 0.5472425328617966.
+[ Thu Sep 17 08:25:28 2020 ] 	Top1: 82.70%
+[ Thu Sep 17 08:25:28 2020 ] 	Top5: 97.63%
+[ Thu Sep 17 08:25:28 2020 ] Training epoch: 10
+[ Thu Sep 17 10:05:43 2020 ] 	Mean training loss: 0.6710.
+[ Thu Sep 17 10:05:43 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Thu Sep 17 10:05:43 2020 ] Eval epoch: 10
+[ Thu Sep 17 10:19:08 2020 ] 	Mean test loss of 296 batches: 0.5004296234078907.
+[ Thu Sep 17 10:19:08 2020 ] 	Top1: 84.22%
+[ Thu Sep 17 10:19:08 2020 ] 	Top5: 98.21%
+[ Thu Sep 17 10:19:08 2020 ] Training epoch: 11
+[ Thu Sep 17 11:59:15 2020 ] 	Mean training loss: 0.6488.
+[ Thu Sep 17 11:59:15 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Thu Sep 17 11:59:15 2020 ] Eval epoch: 11
+[ Thu Sep 17 12:12:41 2020 ] 	Mean test loss of 296 batches: 0.4295055267677919.
+[ Thu Sep 17 12:12:41 2020 ] 	Top1: 86.98%
+[ Thu Sep 17 12:12:42 2020 ] 	Top5: 98.17%
+[ Thu Sep 17 12:12:42 2020 ] Training epoch: 12
+[ Thu Sep 17 13:52:48 2020 ] 	Mean training loss: 0.6238.
+[ Thu Sep 17 13:52:48 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Thu Sep 17 13:52:48 2020 ] Eval epoch: 12
+[ Thu Sep 17 14:06:13 2020 ] 	Mean test loss of 296 batches: 0.4828256265939893.
+[ Thu Sep 17 14:06:13 2020 ] 	Top1: 84.81%
+[ Thu Sep 17 14:06:13 2020 ] 	Top5: 97.90%
+[ Thu Sep 17 14:06:13 2020 ] Training epoch: 13
+[ Thu Sep 17 15:46:24 2020 ] 	Mean training loss: 0.6069.
+[ Thu Sep 17 15:46:24 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Thu Sep 17 15:46:24 2020 ] Eval epoch: 13
+[ Thu Sep 17 15:59:49 2020 ] 	Mean test loss of 296 batches: 0.560937317793031.
+[ Thu Sep 17 15:59:49 2020 ] 	Top1: 82.47%
+[ Thu Sep 17 15:59:49 2020 ] 	Top5: 97.82%
+[ Thu Sep 17 15:59:49 2020 ] Training epoch: 14
+[ Thu Sep 17 17:40:08 2020 ] 	Mean training loss: 0.5959.
+[ Thu Sep 17 17:40:08 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Thu Sep 17 17:40:08 2020 ] Eval epoch: 14
+[ Thu Sep 17 17:53:34 2020 ] 	Mean test loss of 296 batches: 0.37781196324205074.
+[ Thu Sep 17 17:53:35 2020 ] 	Top1: 87.82%
+[ Thu Sep 17 17:53:35 2020 ] 	Top5: 98.56%
+[ Thu Sep 17 17:53:35 2020 ] Training epoch: 15
+[ Thu Sep 17 19:34:04 2020 ] 	Mean training loss: 0.5772.
+[ Thu Sep 17 19:34:04 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Thu Sep 17 19:34:04 2020 ] Eval epoch: 15
+[ Thu Sep 17 19:47:32 2020 ] 	Mean test loss of 296 batches: 0.4872887456739271.
+[ Thu Sep 17 19:47:32 2020 ] 	Top1: 84.63%
+[ Thu Sep 17 19:47:33 2020 ] 	Top5: 98.24%
+[ Thu Sep 17 19:47:33 2020 ] Training epoch: 16
+[ Thu Sep 17 21:27:39 2020 ] 	Mean training loss: 0.5691.
+[ Thu Sep 17 21:27:39 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Thu Sep 17 21:27:39 2020 ] Eval epoch: 16
+[ Thu Sep 17 21:41:05 2020 ] 	Mean test loss of 296 batches: 0.48405833099339457.
+[ Thu Sep 17 21:41:05 2020 ] 	Top1: 84.37%
+[ Thu Sep 17 21:41:05 2020 ] 	Top5: 98.37%
+[ Thu Sep 17 21:41:05 2020 ] Training epoch: 17
+[ Thu Sep 17 23:21:41 2020 ] 	Mean training loss: 0.5525.
+[ Thu Sep 17 23:21:41 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Thu Sep 17 23:21:41 2020 ] Eval epoch: 17
+[ Thu Sep 17 23:35:10 2020 ] 	Mean test loss of 296 batches: 0.402278487948147.
+[ Thu Sep 17 23:35:10 2020 ] 	Top1: 87.66%
+[ Thu Sep 17 23:35:10 2020 ] 	Top5: 98.47%
+[ Thu Sep 17 23:35:10 2020 ] Training epoch: 18
+[ Fri Sep 18 01:15:35 2020 ] 	Mean training loss: 0.5397.
+[ Fri Sep 18 01:15:35 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Fri Sep 18 01:15:36 2020 ] Eval epoch: 18
+[ Fri Sep 18 01:29:02 2020 ] 	Mean test loss of 296 batches: 0.4227752874328478.
+[ Fri Sep 18 01:29:02 2020 ] 	Top1: 86.57%
+[ Fri Sep 18 01:29:02 2020 ] 	Top5: 98.49%
+[ Fri Sep 18 01:29:02 2020 ] Training epoch: 19
+[ Fri Sep 18 03:09:34 2020 ] 	Mean training loss: 0.5296.
+[ Fri Sep 18 03:09:34 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Fri Sep 18 03:09:34 2020 ] Eval epoch: 19
+[ Fri Sep 18 03:23:02 2020 ] 	Mean test loss of 296 batches: 0.39167148796086376.
+[ Fri Sep 18 03:23:02 2020 ] 	Top1: 87.40%
+[ Fri Sep 18 03:23:02 2020 ] 	Top5: 98.68%
+[ Fri Sep 18 03:23:02 2020 ] Training epoch: 20
+[ Fri Sep 18 05:03:29 2020 ] 	Mean training loss: 0.5269.
+[ Fri Sep 18 05:03:29 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Fri Sep 18 05:03:29 2020 ] Eval epoch: 20
+[ Fri Sep 18 05:16:56 2020 ] 	Mean test loss of 296 batches: 0.36484053932331706.
+[ Fri Sep 18 05:16:56 2020 ] 	Top1: 88.49%
+[ Fri Sep 18 05:16:57 2020 ] 	Top5: 98.70%
+[ Fri Sep 18 05:16:57 2020 ] Training epoch: 21
+[ Fri Sep 18 06:57:26 2020 ] 	Mean training loss: 0.5066.
+[ Fri Sep 18 06:57:26 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Fri Sep 18 06:57:26 2020 ] Eval epoch: 21
+[ Fri Sep 18 07:10:54 2020 ] 	Mean test loss of 296 batches: 0.39532250508263306.
+[ Fri Sep 18 07:10:54 2020 ] 	Top1: 87.21%
+[ Fri Sep 18 07:10:54 2020 ] 	Top5: 98.55%
+[ Fri Sep 18 07:10:54 2020 ] Training epoch: 22
+[ Fri Sep 18 08:51:11 2020 ] 	Mean training loss: 0.5057.
+[ Fri Sep 18 08:51:11 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Fri Sep 18 08:51:11 2020 ] Eval epoch: 22
+[ Fri Sep 18 09:04:38 2020 ] 	Mean test loss of 296 batches: 0.5006014096575815.
+[ Fri Sep 18 09:04:38 2020 ] 	Top1: 85.06%
+[ Fri Sep 18 09:04:38 2020 ] 	Top5: 98.22%
+[ Fri Sep 18 09:04:38 2020 ] Training epoch: 23
+[ Fri Sep 18 10:45:03 2020 ] 	Mean training loss: 0.5016.
+[ Fri Sep 18 10:45:03 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Fri Sep 18 10:45:03 2020 ] Eval epoch: 23
+[ Fri Sep 18 10:58:30 2020 ] 	Mean test loss of 296 batches: 0.4280462061633935.
+[ Fri Sep 18 10:58:30 2020 ] 	Top1: 86.58%
+[ Fri Sep 18 10:58:30 2020 ] 	Top5: 98.46%
+[ Fri Sep 18 10:58:30 2020 ] Training epoch: 24
+[ Fri Sep 18 12:38:47 2020 ] 	Mean training loss: 0.4872.
+[ Fri Sep 18 12:38:47 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Fri Sep 18 12:38:47 2020 ] Eval epoch: 24
+[ Fri Sep 18 12:52:16 2020 ] 	Mean test loss of 296 batches: 0.3557190855813993.
+[ Fri Sep 18 12:52:16 2020 ] 	Top1: 88.51%
+[ Fri Sep 18 12:52:16 2020 ] 	Top5: 98.67%
+[ Fri Sep 18 12:52:16 2020 ] Training epoch: 25
+[ Fri Sep 18 14:32:57 2020 ] 	Mean training loss: 0.4800.
+[ Fri Sep 18 14:32:57 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Fri Sep 18 14:32:57 2020 ] Eval epoch: 25
+[ Fri Sep 18 14:46:28 2020 ] 	Mean test loss of 296 batches: 0.42554112820810563.
+[ Fri Sep 18 14:46:28 2020 ] 	Top1: 86.74%
+[ Fri Sep 18 14:46:28 2020 ] 	Top5: 98.39%
+[ Fri Sep 18 14:46:28 2020 ] Training epoch: 26
+[ Fri Sep 18 16:27:20 2020 ] 	Mean training loss: 0.4768.
+[ Fri Sep 18 16:27:20 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Fri Sep 18 16:27:20 2020 ] Eval epoch: 26
+[ Fri Sep 18 16:40:53 2020 ] 	Mean test loss of 296 batches: 0.3515457422598391.
+[ Fri Sep 18 16:40:53 2020 ] 	Top1: 88.71%
+[ Fri Sep 18 16:40:53 2020 ] 	Top5: 98.70%
+[ Fri Sep 18 16:40:53 2020 ] Training epoch: 27
+[ Fri Sep 18 18:21:33 2020 ] 	Mean training loss: 0.4742.
+[ Fri Sep 18 18:21:33 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Fri Sep 18 18:21:33 2020 ] Eval epoch: 27
+[ Fri Sep 18 18:34:59 2020 ] 	Mean test loss of 296 batches: 0.36944155488163233.
+[ Fri Sep 18 18:34:59 2020 ] 	Top1: 88.77%
+[ Fri Sep 18 18:35:00 2020 ] 	Top5: 98.52%
+[ Fri Sep 18 18:35:00 2020 ] Training epoch: 28
+[ Fri Sep 18 20:15:07 2020 ] 	Mean training loss: 0.4689.
+[ Fri Sep 18 20:15:07 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Fri Sep 18 20:15:07 2020 ] Eval epoch: 28
+[ Fri Sep 18 20:28:33 2020 ] 	Mean test loss of 296 batches: 0.41584089441174593.
+[ Fri Sep 18 20:28:33 2020 ] 	Top1: 86.85%
+[ Fri Sep 18 20:28:33 2020 ] 	Top5: 98.56%
+[ Fri Sep 18 20:28:33 2020 ] Training epoch: 29
+[ Fri Sep 18 22:08:47 2020 ] 	Mean training loss: 0.4651.
+[ Fri Sep 18 22:08:47 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Fri Sep 18 22:08:47 2020 ] Eval epoch: 29
+[ Fri Sep 18 22:22:14 2020 ] 	Mean test loss of 296 batches: 0.40793481600042936.
+[ Fri Sep 18 22:22:14 2020 ] 	Top1: 87.44%
+[ Fri Sep 18 22:22:14 2020 ] 	Top5: 98.52%
+[ Fri Sep 18 22:22:14 2020 ] Training epoch: 30
+[ Sat Sep 19 00:02:37 2020 ] 	Mean training loss: 0.4621.
+[ Sat Sep 19 00:02:37 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Sat Sep 19 00:02:37 2020 ] Eval epoch: 30
+[ Sat Sep 19 00:16:04 2020 ] 	Mean test loss of 296 batches: 0.44199159313496705.
+[ Sat Sep 19 00:16:04 2020 ] 	Top1: 86.26%
+[ Sat Sep 19 00:16:04 2020 ] 	Top5: 98.17%
+[ Sat Sep 19 00:16:04 2020 ] Training epoch: 31
+[ Sat Sep 19 01:56:21 2020 ] 	Mean training loss: 0.2142.
+[ Sat Sep 19 01:56:21 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Sat Sep 19 01:56:21 2020 ] Eval epoch: 31
+[ Sat Sep 19 02:09:48 2020 ] 	Mean test loss of 296 batches: 0.2128207948612603.
+[ Sat Sep 19 02:09:48 2020 ] 	Top1: 93.39%
+[ Sat Sep 19 02:09:48 2020 ] 	Top5: 99.17%
+[ Sat Sep 19 02:09:48 2020 ] Training epoch: 32
+[ Sat Sep 19 03:50:17 2020 ] 	Mean training loss: 0.1411.
+[ Sat Sep 19 03:50:17 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Sat Sep 19 03:50:17 2020 ] Eval epoch: 32
+[ Sat Sep 19 04:03:46 2020 ] 	Mean test loss of 296 batches: 0.20712903622739218.
+[ Sat Sep 19 04:03:46 2020 ] 	Top1: 93.75%
+[ Sat Sep 19 04:03:46 2020 ] 	Top5: 99.13%
+[ Sat Sep 19 04:03:46 2020 ] Training epoch: 33
+[ Sat Sep 19 05:44:05 2020 ] 	Mean training loss: 0.1117.
+[ Sat Sep 19 05:44:05 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Sat Sep 19 05:44:05 2020 ] Eval epoch: 33
+[ Sat Sep 19 05:57:32 2020 ] 	Mean test loss of 296 batches: 0.2032628929796251.
+[ Sat Sep 19 05:57:33 2020 ] 	Top1: 94.03%
+[ Sat Sep 19 05:57:33 2020 ] 	Top5: 99.20%
+[ Sat Sep 19 05:57:33 2020 ] Training epoch: 34
+[ Sat Sep 19 07:38:03 2020 ] 	Mean training loss: 0.0892.
+[ Sat Sep 19 07:38:03 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Sat Sep 19 07:38:03 2020 ] Eval epoch: 34
+[ Sat Sep 19 07:51:31 2020 ] 	Mean test loss of 296 batches: 0.20922779042676493.
+[ Sat Sep 19 07:51:31 2020 ] 	Top1: 93.88%
+[ Sat Sep 19 07:51:31 2020 ] 	Top5: 99.12%
+[ Sat Sep 19 07:51:31 2020 ] Training epoch: 35
+[ Sat Sep 19 09:31:48 2020 ] 	Mean training loss: 0.0739.
+[ Sat Sep 19 09:31:48 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Sat Sep 19 09:31:48 2020 ] Eval epoch: 35
+[ Sat Sep 19 09:45:16 2020 ] 	Mean test loss of 296 batches: 0.21072071876276183.
+[ Sat Sep 19 09:45:17 2020 ] 	Top1: 93.80%
+[ Sat Sep 19 09:45:17 2020 ] 	Top5: 99.14%
+[ Sat Sep 19 09:45:17 2020 ] Training epoch: 36
+[ Sat Sep 19 11:25:31 2020 ] 	Mean training loss: 0.0590.
+[ Sat Sep 19 11:25:31 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Sat Sep 19 11:25:31 2020 ] Eval epoch: 36
+[ Sat Sep 19 11:38:56 2020 ] 	Mean test loss of 296 batches: 0.21525586786604411.
+[ Sat Sep 19 11:38:56 2020 ] 	Top1: 94.08%
+[ Sat Sep 19 11:38:57 2020 ] 	Top5: 99.12%
+[ Sat Sep 19 11:38:57 2020 ] Training epoch: 37
+[ Sat Sep 19 13:19:12 2020 ] 	Mean training loss: 0.0494.
+[ Sat Sep 19 13:19:12 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Sat Sep 19 13:19:12 2020 ] Eval epoch: 37
+[ Sat Sep 19 13:32:37 2020 ] 	Mean test loss of 296 batches: 0.22263091563473683.
+[ Sat Sep 19 13:32:37 2020 ] 	Top1: 93.87%
+[ Sat Sep 19 13:32:37 2020 ] 	Top5: 99.10%
+[ Sat Sep 19 13:32:37 2020 ] Training epoch: 38
+[ Sat Sep 19 15:13:03 2020 ] 	Mean training loss: 0.0401.
+[ Sat Sep 19 15:13:03 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Sat Sep 19 15:13:03 2020 ] Eval epoch: 38
+[ Sat Sep 19 15:26:31 2020 ] 	Mean test loss of 296 batches: 0.2232135680529314.
+[ Sat Sep 19 15:26:31 2020 ] 	Top1: 93.93%
+[ Sat Sep 19 15:26:31 2020 ] 	Top5: 99.13%
+[ Sat Sep 19 15:26:31 2020 ] Training epoch: 39
+[ Sat Sep 19 17:06:51 2020 ] 	Mean training loss: 0.0340.
+[ Sat Sep 19 17:06:51 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Sat Sep 19 17:06:51 2020 ] Eval epoch: 39
+[ Sat Sep 19 17:20:19 2020 ] 	Mean test loss of 296 batches: 0.22526626087523796.
+[ Sat Sep 19 17:20:19 2020 ] 	Top1: 93.98%
+[ Sat Sep 19 17:20:19 2020 ] 	Top5: 99.09%
+[ Sat Sep 19 17:20:19 2020 ] Training epoch: 40
+[ Sat Sep 19 19:00:35 2020 ] 	Mean training loss: 0.0283.
+[ Sat Sep 19 19:00:35 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Sat Sep 19 19:00:35 2020 ] Eval epoch: 40
+[ Sat Sep 19 19:14:00 2020 ] 	Mean test loss of 296 batches: 0.23303672001772635.
+[ Sat Sep 19 19:14:00 2020 ] 	Top1: 93.92%
+[ Sat Sep 19 19:14:00 2020 ] 	Top5: 99.01%
+[ Sat Sep 19 19:14:00 2020 ] Training epoch: 41
+[ Sat Sep 19 20:54:10 2020 ] 	Mean training loss: 0.0215.
+[ Sat Sep 19 20:54:10 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Sat Sep 19 20:54:10 2020 ] Eval epoch: 41
+[ Sat Sep 19 21:07:32 2020 ] 	Mean test loss of 296 batches: 0.2269777453227623.
+[ Sat Sep 19 21:07:32 2020 ] 	Top1: 93.98%
+[ Sat Sep 19 21:07:32 2020 ] 	Top5: 99.07%
+[ Sat Sep 19 21:07:32 2020 ] Training epoch: 42
+[ Sat Sep 19 22:47:35 2020 ] 	Mean training loss: 0.0186.
+[ Sat Sep 19 22:47:35 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Sat Sep 19 22:47:35 2020 ] Eval epoch: 42
+[ Sat Sep 19 23:00:57 2020 ] 	Mean test loss of 296 batches: 0.22686813572874745.
+[ Sat Sep 19 23:00:57 2020 ] 	Top1: 94.09%
+[ Sat Sep 19 23:00:57 2020 ] 	Top5: 99.08%
+[ Sat Sep 19 23:00:57 2020 ] Training epoch: 43
+[ Sun Sep 20 00:40:53 2020 ] 	Mean training loss: 0.0185.
+[ Sun Sep 20 00:40:53 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Sun Sep 20 00:40:53 2020 ] Eval epoch: 43
+[ Sun Sep 20 00:54:15 2020 ] 	Mean test loss of 296 batches: 0.22546302479364583.
+[ Sun Sep 20 00:54:15 2020 ] 	Top1: 94.17%
+[ Sun Sep 20 00:54:15 2020 ] 	Top5: 99.08%
+[ Sun Sep 20 00:54:15 2020 ] Training epoch: 44
+[ Sun Sep 20 02:34:16 2020 ] 	Mean training loss: 0.0175.
+[ Sun Sep 20 02:34:16 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Sun Sep 20 02:34:16 2020 ] Eval epoch: 44
+[ Sun Sep 20 02:47:41 2020 ] 	Mean test loss of 296 batches: 0.22626572366602518.
+[ Sun Sep 20 02:47:42 2020 ] 	Top1: 94.15%
+[ Sun Sep 20 02:47:42 2020 ] 	Top5: 99.09%
+[ Sun Sep 20 02:47:42 2020 ] Training epoch: 45
+[ Sun Sep 20 04:27:45 2020 ] 	Mean training loss: 0.0163.
+[ Sun Sep 20 04:27:45 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Sun Sep 20 04:27:45 2020 ] Eval epoch: 45
+[ Sun Sep 20 04:41:06 2020 ] 	Mean test loss of 296 batches: 0.2272983309938698.
+[ Sun Sep 20 04:41:06 2020 ] 	Top1: 94.13%
+[ Sun Sep 20 04:41:07 2020 ] 	Top5: 99.06%
+[ Sun Sep 20 04:41:07 2020 ] Training epoch: 46
+[ Sun Sep 20 06:21:07 2020 ] 	Mean training loss: 0.0168.
+[ Sun Sep 20 06:21:07 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Sun Sep 20 06:21:07 2020 ] Eval epoch: 46
+[ Sun Sep 20 06:34:31 2020 ] 	Mean test loss of 296 batches: 0.2254972278417365.
+[ Sun Sep 20 06:34:31 2020 ] 	Top1: 94.15%
+[ Sun Sep 20 06:34:31 2020 ] 	Top5: 99.12%
+[ Sun Sep 20 06:34:31 2020 ] Training epoch: 47
+[ Sun Sep 20 08:14:22 2020 ] 	Mean training loss: 0.0165.
+[ Sun Sep 20 08:14:22 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Sun Sep 20 08:14:22 2020 ] Eval epoch: 47
+[ Sun Sep 20 08:27:49 2020 ] 	Mean test loss of 296 batches: 0.22870110010577216.
+[ Sun Sep 20 08:27:49 2020 ] 	Top1: 94.03%
+[ Sun Sep 20 08:27:49 2020 ] 	Top5: 99.11%
+[ Sun Sep 20 08:27:49 2020 ] Training epoch: 48
+[ Sun Sep 20 10:07:50 2020 ] 	Mean training loss: 0.0159.
+[ Sun Sep 20 10:07:50 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Sun Sep 20 10:07:50 2020 ] Eval epoch: 48
+[ Sun Sep 20 10:21:15 2020 ] 	Mean test loss of 296 batches: 0.22759488454038226.
+[ Sun Sep 20 10:21:15 2020 ] 	Top1: 94.07%
+[ Sun Sep 20 10:21:15 2020 ] 	Top5: 99.08%
+[ Sun Sep 20 10:21:15 2020 ] Training epoch: 49
+[ Sun Sep 20 12:01:06 2020 ] 	Mean training loss: 0.0153.
+[ Sun Sep 20 12:01:06 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Sun Sep 20 12:01:06 2020 ] Eval epoch: 49
+[ Sun Sep 20 12:14:29 2020 ] 	Mean test loss of 296 batches: 0.2249981403552197.
+[ Sun Sep 20 12:14:29 2020 ] 	Top1: 94.18%
+[ Sun Sep 20 12:14:29 2020 ] 	Top5: 99.07%
+[ Sun Sep 20 12:14:29 2020 ] Training epoch: 50
+[ Sun Sep 20 13:54:29 2020 ] 	Mean training loss: 0.0152.
+[ Sun Sep 20 13:54:29 2020 ] 	Time consumption: [Data]00%, [Network]100%
+[ Sun Sep 20 13:54:29 2020 ] Eval epoch: 50
+[ Sun Sep 20 14:07:53 2020 ] 	Mean test loss of 296 batches: 0.22642160720519117.
+[ Sun Sep 20 14:07:53 2020 ] 	Top1: 94.15%
+[ Sun Sep 20 14:07:53 2020 ] 	Top5: 99.07%
